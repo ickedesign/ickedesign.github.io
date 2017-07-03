@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://icke.site/"/>
-  <updated>2017-07-03T03:28:01.977Z</updated>
+  <updated>2017-07-03T08:19:13.492Z</updated>
   <id>http://icke.site/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://icke.site/2017/06/28/20170628-ES6-SyntaxLearning/"/>
     <id>http://icke.site/2017/06/28/20170628-ES6-SyntaxLearning/</id>
     <published>2017-06-28T02:47:03.000Z</published>
-    <updated>2017-07-03T03:28:01.977Z</updated>
+    <updated>2017-07-03T08:19:13.492Z</updated>
     
-    <content type="html"><![CDATA[<p>总结包含以下内容：<code>let</code>,<code>const</code>命令，解构赋值，正则扩展，字符串扩展，数值扩展，数组扩展，函数扩展，对象扩展，<code>Symbol</code>的用法，<code>Set</code>,<code>Map</code>数据结构，<code>Map</code>,<code>Set</code>与数组和对象的比较，<code>Ploxy</code>和<code>Reflect</code>，类和对象，<code>Promise</code>，<code>Iterator</code>和<code>for..of</code>循环，<code>Generator</code>，<code>Decorator</code>，模块化(更新完毕)</p>
+    <content type="html"><![CDATA[<p>总结包含以下内容：<code>let</code>,<code>const</code>命令，解构赋值，正则扩展，字符串扩展，数值扩展，数组扩展，函数扩展，对象扩展，<code>Symbol</code>的用法，<code>Set</code>,<code>Map</code>数据结构，<code>Map</code>,<code>Set</code>与数组和对象的比较，<code>Ploxy</code>和<code>Reflect</code>，类和对象，<code>Promise</code>，<code>Iterator</code>和<code>for..of</code>循环，<code>Generator</code>，<code>Decorator</code>，模块化(更新完毕)<br><a id="more"></a></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -31,7 +31,6 @@
                 <div class="image-caption">ES6-SyntaxLearning</div>
             </figure>
 <hr>
-<a id="more"></a>
 <h3 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h3><blockquote>
 <p>笔记发布在了<a href="https://segmentfault.com/u/ickedesign/notes" target="_blank" rel="external">segmentFault</a>中，需要登录segmentFault才可查看</p>
 </blockquote>
@@ -63,15 +62,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;总结包含以下内容：&lt;code&gt;let&lt;/code&gt;,&lt;code&gt;const&lt;/code&gt;命令，解构赋值，正则扩展，字符串扩展，数值扩展，数组扩展，函数扩展，对象扩展，&lt;code&gt;Symbol&lt;/code&gt;的用法，&lt;code&gt;Set&lt;/code&gt;,&lt;code&gt;Map&lt;/code&gt;数据结构，&lt;code&gt;Map&lt;/code&gt;,&lt;code&gt;Set&lt;/code&gt;与数组和对象的比较，&lt;code&gt;Ploxy&lt;/code&gt;和&lt;code&gt;Reflect&lt;/code&gt;，类和对象，&lt;code&gt;Promise&lt;/code&gt;，&lt;code&gt;Iterator&lt;/code&gt;和&lt;code&gt;for..of&lt;/code&gt;循环，&lt;code&gt;Generator&lt;/code&gt;，&lt;code&gt;Decorator&lt;/code&gt;，模块化(更新完毕)&lt;/p&gt;
-&lt;figure class=&quot;image-bubble&quot;&gt;
-                &lt;div class=&quot;img-lightbox&quot;&gt;
-                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
-                    &lt;img src=&quot;/img/ES6-SyntaxLearning.png&quot; alt=&quot;ES6-SyntaxLearning&quot; title=&quot;&quot;&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;image-caption&quot;&gt;ES6-SyntaxLearning&lt;/div&gt;
-            &lt;/figure&gt;
-&lt;hr&gt;
+      &lt;p&gt;总结包含以下内容：&lt;code&gt;let&lt;/code&gt;,&lt;code&gt;const&lt;/code&gt;命令，解构赋值，正则扩展，字符串扩展，数值扩展，数组扩展，函数扩展，对象扩展，&lt;code&gt;Symbol&lt;/code&gt;的用法，&lt;code&gt;Set&lt;/code&gt;,&lt;code&gt;Map&lt;/code&gt;数据结构，&lt;code&gt;Map&lt;/code&gt;,&lt;code&gt;Set&lt;/code&gt;与数组和对象的比较，&lt;code&gt;Ploxy&lt;/code&gt;和&lt;code&gt;Reflect&lt;/code&gt;，类和对象，&lt;code&gt;Promise&lt;/code&gt;，&lt;code&gt;Iterator&lt;/code&gt;和&lt;code&gt;for..of&lt;/code&gt;循环，&lt;code&gt;Generator&lt;/code&gt;，&lt;code&gt;Decorator&lt;/code&gt;，模块化(更新完毕)&lt;br&gt;
     
     </summary>
     
@@ -87,9 +78,9 @@
     <link href="http://icke.site/2017/06/14/20170614-JavaScript-JS_Pattern/"/>
     <id>http://icke.site/2017/06/14/20170614-JavaScript-JS_Pattern/</id>
     <published>2017-06-14T13:57:00.000Z</published>
-    <updated>2017-07-03T03:21:54.365Z</updated>
+    <updated>2017-07-03T08:18:52.159Z</updated>
     
-    <content type="html"><![CDATA[<p>总结包含以下内容：第二章 this、call和apply，等等（待更新）</p>
+    <content type="html"><![CDATA[<p>总结包含以下内容：第二章 this、call和apply，等等（待更新）<br><a id="more"></a></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -98,7 +89,6 @@
                 <div class="image-caption">JS_Pattern</div>
             </figure>
 <hr>
-<a id="more"></a>
 <h3 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h3><blockquote>
 <p>笔记发布在了segmentFault中</p>
 </blockquote>
@@ -110,15 +100,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;总结包含以下内容：第二章 this、call和apply，等等（待更新）&lt;/p&gt;
-&lt;figure class=&quot;image-bubble&quot;&gt;
-                &lt;div class=&quot;img-lightbox&quot;&gt;
-                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
-                    &lt;img src=&quot;/img/JS_Pattern.png&quot; alt=&quot;JS_Pattern&quot; title=&quot;&quot;&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;image-caption&quot;&gt;JS_Pattern&lt;/div&gt;
-            &lt;/figure&gt;
-&lt;hr&gt;
+      &lt;p&gt;总结包含以下内容：第二章 this、call和apply，等等（待更新）&lt;br&gt;
     
     </summary>
     
@@ -134,9 +116,10 @@
     <link href="http://icke.site/2017/06/11/20170611-XSS-WebSecurity/"/>
     <id>http://icke.site/2017/06/11/20170611-XSS-WebSecurity/</id>
     <published>2017-06-11T12:00:03.000Z</published>
-    <updated>2017-07-03T03:13:52.119Z</updated>
+    <updated>2017-07-03T08:16:23.694Z</updated>
     
     <content type="html"><![CDATA[<p>总结包含以下内容：了解XSS的攻击方式和防范措施，并进行实战</p>
+<a id="more"></a>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -145,7 +128,6 @@
                 <div class="image-caption">XSS-WebSecurity</div>
             </figure>
 <hr>
-<a id="more"></a>
 <h3 id="什么是XSS"><a href="#什么是XSS" class="headerlink" title="什么是XSS"></a>什么是XSS</h3><ul>
 <li><p><strong>简介</strong></p>
 <p> 跨站脚本攻击(Cross Site Scripting)，为不和层叠样式表(Cascading Style Sheets, CSS)的缩写混淆，故将跨站脚本攻击缩写为XSS。恶意攻击者通常往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的, 还有另外一种产常见的就是CSRF(Cross-site request forgery)跨站点请求伪造。</p>
@@ -221,14 +203,6 @@
     <summary type="html">
     
       &lt;p&gt;总结包含以下内容：了解XSS的攻击方式和防范措施，并进行实战&lt;/p&gt;
-&lt;figure class=&quot;image-bubble&quot;&gt;
-                &lt;div class=&quot;img-lightbox&quot;&gt;
-                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
-                    &lt;img src=&quot;/img/XSS-WebSecurity.png&quot; alt=&quot;XSS-WebSecurity&quot; title=&quot;&quot;&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;image-caption&quot;&gt;XSS-WebSecurity&lt;/div&gt;
-            &lt;/figure&gt;
-&lt;hr&gt;
     
     </summary>
     
@@ -244,9 +218,10 @@
     <link href="http://icke.site/2017/05/25/20170525-HTML5-Performance/"/>
     <id>http://icke.site/2017/05/25/20170525-HTML5-Performance/</id>
     <published>2017-05-24T17:20:20.000Z</published>
-    <updated>2017-07-03T03:24:24.249Z</updated>
+    <updated>2017-07-03T08:16:11.070Z</updated>
     
     <content type="html"><![CDATA[<p>总结包含以下内容：基于HTML5,浅谈移动端ICON制作、性能陷阱和硬件加速</p>
+<a id="more"></a>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -255,7 +230,6 @@
                 <div class="image-caption">HTML5Performance</div>
             </figure>
 <hr>
-<a id="more"></a>
 <h3 id="ICON制作"><a href="#ICON制作" class="headerlink" title="ICON制作"></a>ICON制作</h3><ul>
 <li>使用Base64格式的图片制作ICON<ul>
 <li>可减少请求，加快首屏数据的显示速度，但体积大，未压缩，不易维护 </li>
@@ -294,14 +268,6 @@
     <summary type="html">
     
       &lt;p&gt;总结包含以下内容：基于HTML5,浅谈移动端ICON制作、性能陷阱和硬件加速&lt;/p&gt;
-&lt;figure class=&quot;image-bubble&quot;&gt;
-                &lt;div class=&quot;img-lightbox&quot;&gt;
-                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
-                    &lt;img src=&quot;/img/HTML5Performance.png&quot; alt=&quot;HTML5Performance&quot; title=&quot;&quot;&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;image-caption&quot;&gt;HTML5Performance&lt;/div&gt;
-            &lt;/figure&gt;
-&lt;hr&gt;
     
     </summary>
     
@@ -317,9 +283,10 @@
     <link href="http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/"/>
     <id>http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/</id>
     <published>2017-05-17T02:34:30.000Z</published>
-    <updated>2017-07-03T03:24:37.245Z</updated>
+    <updated>2017-07-03T08:16:04.199Z</updated>
     
     <content type="html"><![CDATA[<p>总结包含以下内容：HTML5的应用场景，HTML5对比Native的优势，WEB+APP发展现状，HTML5 WEB APP的发展趋势</p>
+<a id="more"></a>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -328,7 +295,6 @@
                 <div class="image-caption">HTML5Analysis</div>
             </figure>
 <hr>
-<a id="more"></a>
 <h3 id="HTML5的应用场景"><a href="#HTML5的应用场景" class="headerlink" title="HTML5的应用场景"></a>HTML5的应用场景</h3><ul>
 <li>PC端：LocalStorage本地存储(渐强式体验：对支持HTML5的浏览器使用LocalStorage)</li>
 <li>手机端：<ul>
@@ -380,14 +346,6 @@
     <summary type="html">
     
       &lt;p&gt;总结包含以下内容：HTML5的应用场景，HTML5对比Native的优势，WEB+APP发展现状，HTML5 WEB APP的发展趋势&lt;/p&gt;
-&lt;figure class=&quot;image-bubble&quot;&gt;
-                &lt;div class=&quot;img-lightbox&quot;&gt;
-                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
-                    &lt;img src=&quot;/img/HTML5Analysis.png&quot; alt=&quot;HTML5Analysis&quot; title=&quot;&quot;&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;image-caption&quot;&gt;HTML5Analysis&lt;/div&gt;
-            &lt;/figure&gt;
-&lt;hr&gt;
     
     </summary>
     
@@ -403,18 +361,16 @@
     <link href="http://icke.site/2017/03/12/20170312-CSS-Study-CSS-Layout/"/>
     <id>http://icke.site/2017/03/12/20170312-CSS-Study-CSS-Layout/</id>
     <published>2017-03-12T14:53:30.000Z</published>
-    <updated>2017-07-03T03:23:51.330Z</updated>
+    <updated>2017-07-03T08:14:52.301Z</updated>
     
-    <content type="html"><![CDATA[<p>总结包含以下内容：CSS hack、清除浮动(clearfix hack)、CSS伪类和伪元素、<code>Box-Sizing</code>、水平居中和垂直居中、em和rem的区别、<code>max-width</code>、@media媒体查询、<code>columns</code>、@import加载CSS文件和link的区别、使用CDN、Flex布局</p>
-<figure class="image-bubble">
+    <content type="html"><![CDATA[<p>总结包含以下内容：CSS hack、清除浮动(clearfix hack)、CSS伪类和伪元素、<code>Box-Sizing</code>、水平居中和垂直居中、em和rem的区别、<code>max-width</code>、@media媒体查询、<code>columns</code>、@import加载CSS文件和link的区别、使用CDN、Flex布局<br><a id="more"></a><br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
                     <img src="/img/Study-CSS-Layout.png" alt="Study CSS Layout" title="">
                 </div>
                 <div class="image-caption">Study CSS Layout</div>
-            </figure>
+            </figure></p>
 <hr>
-<a id="more"></a>
 <h3 id="CSS-hack"><a href="#CSS-hack" class="headerlink" title="CSS hack"></a>CSS hack</h3><p>因为不同浏览器对CSS的兼容不同，所以需要hack来对CSS做一些兼容。常用的有四种方法：</p>
 <ul>
 <li><p><strong>条件注释法</strong></p>
@@ -568,15 +524,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;总结包含以下内容：CSS hack、清除浮动(clearfix hack)、CSS伪类和伪元素、&lt;code&gt;Box-Sizing&lt;/code&gt;、水平居中和垂直居中、em和rem的区别、&lt;code&gt;max-width&lt;/code&gt;、@media媒体查询、&lt;code&gt;columns&lt;/code&gt;、@import加载CSS文件和link的区别、使用CDN、Flex布局&lt;/p&gt;
-&lt;figure class=&quot;image-bubble&quot;&gt;
-                &lt;div class=&quot;img-lightbox&quot;&gt;
-                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
-                    &lt;img src=&quot;/img/Study-CSS-Layout.png&quot; alt=&quot;Study CSS Layout&quot; title=&quot;&quot;&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;image-caption&quot;&gt;Study CSS Layout&lt;/div&gt;
-            &lt;/figure&gt;
-&lt;hr&gt;
+      &lt;p&gt;总结包含以下内容：CSS hack、清除浮动(clearfix hack)、CSS伪类和伪元素、&lt;code&gt;Box-Sizing&lt;/code&gt;、水平居中和垂直居中、em和rem的区别、&lt;code&gt;max-width&lt;/code&gt;、@media媒体查询、&lt;code&gt;columns&lt;/code&gt;、@import加载CSS文件和link的区别、使用CDN、Flex布局&lt;br&gt;
     
     </summary>
     
@@ -590,9 +538,9 @@
     <link href="http://icke.site/2017/03/10/20170310-JavaScript-arr%5Bi++%5D/"/>
     <id>http://icke.site/2017/03/10/20170310-JavaScript-arr[i++]/</id>
     <published>2017-03-10T07:07:20.000Z</published>
-    <updated>2017-07-03T03:25:17.066Z</updated>
+    <updated>2017-07-03T08:15:29.589Z</updated>
     
-    <content type="html"><![CDATA[<p>总结包含以下内容：<code>i++</code>和<code>++i</code>&nbsp; 的区别，<code>i++</code>和<code>++i</code>&nbsp; 在循环中的区别，<code>arr[i++]</code>和<code>arr[++i]</code>&nbsp; 在循环中的区别，<code>arr[i++]+=1</code>和<code>arr[++i]+=1</code>&nbsp; 在循环中的区别，<code>arr[i++]</code>的使用</p>
+    <content type="html"><![CDATA[<p>总结包含以下内容：<code>i++</code>和<code>++i</code>&nbsp; 的区别，<code>i++</code>和<code>++i</code>&nbsp; 在循环中的区别，<code>arr[i++]</code>和<code>arr[++i]</code>&nbsp; 在循环中的区别，<code>arr[i++]+=1</code>和<code>arr[++i]+=1</code>&nbsp; 在循环中的区别，<code>arr[i++]</code>的使用<br><a id="more"></a></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -600,7 +548,7 @@
                 </div>
                 <div class="image-caption">Array-arr++</div>
             </figure>
-<a id="more"></a>
+<hr>
 <p>前几天做Canvas倒计时的时候，慕课网的老师讲到了一个及时清除不在画布中的小球的做法。以下是实现代码：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//及时清空跳出画布的小球，优化页面的内存</span></div><div class="line"><span class="keyword">var</span> cnt=<span class="number">0</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;balls.length;i++)&#123;</div><div class="line">	<span class="keyword">if</span>(balls[i].x+radius&gt;<span class="number">0</span>&amp;&amp;balls[i].x-radius&lt;canvasWidth)&#123;</div><div class="line">		<span class="comment">//小球数组中的第0个到cnt-1个是在canvas画布中</span></div><div class="line">		balls[cnt++]=balls[i];</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//删除前面的数组使用balls.shift()</span></div><div class="line"><span class="keyword">while</span>(balls.length&gt;cnt)&#123;</div><div class="line">	balls.pop();<span class="comment">//删除第cnt个到balls.length-1个数组</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><code>arr[i++]</code>是什么呢？于是开始一步一步地探索</p>
@@ -640,14 +588,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;总结包含以下内容：&lt;code&gt;i++&lt;/code&gt;和&lt;code&gt;++i&lt;/code&gt;&amp;nbsp; 的区别，&lt;code&gt;i++&lt;/code&gt;和&lt;code&gt;++i&lt;/code&gt;&amp;nbsp; 在循环中的区别，&lt;code&gt;arr[i++]&lt;/code&gt;和&lt;code&gt;arr[++i]&lt;/code&gt;&amp;nbsp; 在循环中的区别，&lt;code&gt;arr[i++]+=1&lt;/code&gt;和&lt;code&gt;arr[++i]+=1&lt;/code&gt;&amp;nbsp; 在循环中的区别，&lt;code&gt;arr[i++]&lt;/code&gt;的使用&lt;/p&gt;
-&lt;figure class=&quot;image-bubble&quot;&gt;
-                &lt;div class=&quot;img-lightbox&quot;&gt;
-                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
-                    &lt;img src=&quot;/img/Array-arr++.png&quot; alt=&quot;Array-arr++&quot; title=&quot;&quot;&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;image-caption&quot;&gt;Array-arr++&lt;/div&gt;
-            &lt;/figure&gt;
+      &lt;p&gt;总结包含以下内容：&lt;code&gt;i++&lt;/code&gt;和&lt;code&gt;++i&lt;/code&gt;&amp;nbsp; 的区别，&lt;code&gt;i++&lt;/code&gt;和&lt;code&gt;++i&lt;/code&gt;&amp;nbsp; 在循环中的区别，&lt;code&gt;arr[i++]&lt;/code&gt;和&lt;code&gt;arr[++i]&lt;/code&gt;&amp;nbsp; 在循环中的区别，&lt;code&gt;arr[i++]+=1&lt;/code&gt;和&lt;code&gt;arr[++i]+=1&lt;/code&gt;&amp;nbsp; 在循环中的区别，&lt;code&gt;arr[i++]&lt;/code&gt;的使用&lt;br&gt;
     
     </summary>
     
@@ -663,9 +604,9 @@
     <link href="http://icke.site/2017/03/09/20170309-Canvas-Countdown/"/>
     <id>http://icke.site/2017/03/09/20170309-Canvas-Countdown/</id>
     <published>2017-03-09T05:14:50.000Z</published>
-    <updated>2017-07-03T03:24:12.867Z</updated>
+    <updated>2017-07-03T08:15:37.356Z</updated>
     
-    <content type="html"><![CDATA[<p>总结包含以下内容：创建画布，绘制直线，绘制弧线，绘制静止的时钟，设置倒计时效果，让倒计时动起来，小球的运动，及时清空Canvas画布外面的小球，将倒计时的效果换成正常时钟效果</p>
+    <content type="html"><![CDATA[<p>总结包含以下内容：创建画布，绘制直线，绘制弧线，绘制静止的时钟，设置倒计时效果，让倒计时动起来，小球的运动，及时清空Canvas画布外面的小球，将倒计时的效果换成正常时钟效果<br><a id="more"></a></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -673,7 +614,7 @@
                 </div>
                 <div class="image-caption">Canvas-Clock</div>
             </figure>
-<a id="more"></a>
+<hr>
 <p>关于Canvas：HTML5 &lt;canvas&gt; 标签用于绘制图像（通过脚本，通常是 JavaScript）。<br>不过，&lt;canvas&gt;元素本身并没有绘制能力（它仅仅是图形的容器），必须使用脚本来完成实际的绘图任务。&nbsp;&nbsp;<em>[该叙述来自<a href="http://www.w3school.com.cn/tags/html_ref_canvas.asp" target="_blank" rel="external">W3CSCHOOL</a>]</em><br>演示： <a href="http://codepen.io/ickedesign/pen/peRvwO" target="_blank" rel="external">Gorgeous Countdown</a></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
@@ -788,7 +729,7 @@
 <li>比较简单<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ret=currentTime.getHours()*<span class="number">3600</span>+currentTime.getMinutes()*<span class="number">60</span>+currentTime.getSeconds();</div></pre></td></tr></table></figure>
 </li>
 </ul>
-<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
 <li><a href="http://www.w3school.com.cn/tags/html_ref_canvas.asp" target="_blank" rel="external">HTML 5 Canvas 参考手册</a>)</li>
 <li><a href="http://www.imooc.com/learn/133" target="_blank" rel="external">炫丽的倒计时效果Canvas绘图与动画基础</a></li>
 </ul>
@@ -796,14 +737,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;总结包含以下内容：创建画布，绘制直线，绘制弧线，绘制静止的时钟，设置倒计时效果，让倒计时动起来，小球的运动，及时清空Canvas画布外面的小球，将倒计时的效果换成正常时钟效果&lt;/p&gt;
-&lt;figure class=&quot;image-bubble&quot;&gt;
-                &lt;div class=&quot;img-lightbox&quot;&gt;
-                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
-                    &lt;img src=&quot;/img/Canvas-Clock.png&quot; alt=&quot;Canvas-Clock&quot; title=&quot;&quot;&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;image-caption&quot;&gt;Canvas-Clock&lt;/div&gt;
-            &lt;/figure&gt;
+      &lt;p&gt;总结包含以下内容：创建画布，绘制直线，绘制弧线，绘制静止的时钟，设置倒计时效果，让倒计时动起来，小球的运动，及时清空Canvas画布外面的小球，将倒计时的效果换成正常时钟效果&lt;br&gt;
     
     </summary>
     
@@ -819,9 +753,9 @@
     <link href="http://icke.site/2017/03/05/20170305-JavaScript-RegExp/"/>
     <id>http://icke.site/2017/03/05/20170305-JavaScript-RegExp/</id>
     <published>2017-03-05T06:02:37.000Z</published>
-    <updated>2017-07-03T03:19:39.913Z</updated>
+    <updated>2017-07-03T08:15:43.545Z</updated>
     
-    <content type="html"><![CDATA[<p>归纳包含以下内容： 正则表达式简介、工具使用、RegExp对象、元字符、字符类、范围类、JS预定义类、量词、JS正则的贪婪模式和非贪婪模式、分组、前瞻、JS对象属性、test和exec方法、字符串对象方法</p>
+    <content type="html"><![CDATA[<p>归纳包含以下内容： 正则表达式简介、工具使用、RegExp对象、元字符、字符类、范围类、JS预定义类、量词、JS正则的贪婪模式和非贪婪模式、分组、前瞻、JS对象属性、test和exec方法、字符串对象方法<br><a id="more"></a></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -829,7 +763,7 @@
                 </div>
                 <div class="image-caption">JS-RegExp</div>
             </figure>
-<a id="more"></a>
+<hr>
 <h3 id="正则表达式简介"><a href="#正则表达式简介" class="headerlink" title="正则表达式简介"></a>正则表达式简介</h3><p>Regular Expression，即正则表达式。使用单个字符串来描述、匹配一系列符合某个句法规则的字符串。</p>
 <hr>
 <h3 id="工具使用"><a href="#工具使用" class="headerlink" title="工具使用"></a>工具使用</h3><p>在线显示正则表达式的图形工具: &nbsp; <a href="http://regexper.com" target="_blank" rel="external">regexper官网</a></p>
@@ -1410,21 +1344,14 @@
 </ul>
 </li>
 </ul>
-<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><ul>
 <li><a href="http://www.imooc.com/learn/706" target="_blank" rel="external">JavaScript正则表达式</a></li>
 </ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;归纳包含以下内容： 正则表达式简介、工具使用、RegExp对象、元字符、字符类、范围类、JS预定义类、量词、JS正则的贪婪模式和非贪婪模式、分组、前瞻、JS对象属性、test和exec方法、字符串对象方法&lt;/p&gt;
-&lt;figure class=&quot;image-bubble&quot;&gt;
-                &lt;div class=&quot;img-lightbox&quot;&gt;
-                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
-                    &lt;img src=&quot;/img/JS-RegExp.png&quot; alt=&quot;JS-RegExp&quot; title=&quot;&quot;&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;image-caption&quot;&gt;JS-RegExp&lt;/div&gt;
-            &lt;/figure&gt;
+      &lt;p&gt;归纳包含以下内容： 正则表达式简介、工具使用、RegExp对象、元字符、字符类、范围类、JS预定义类、量词、JS正则的贪婪模式和非贪婪模式、分组、前瞻、JS对象属性、test和exec方法、字符串对象方法&lt;br&gt;
     
     </summary>
     

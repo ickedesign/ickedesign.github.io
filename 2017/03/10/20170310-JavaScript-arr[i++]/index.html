@@ -44,7 +44,7 @@ ga('send', 'pageview');
 <meta property="og:site_name" content="Icke&#39;s Blog">
 <meta property="og:description" content="总结包含以下内容：i++和++i&amp;nbsp; 的区别，i++和++i&amp;nbsp; 在循环中的区别，arr[i++]和arr[++i]&amp;nbsp; 在循环中的区别，arr[i++]+=1和arr[++i]+=1&amp;nbsp; 在循环中的区别，arr[i++]的使用">
 <meta property="og:image" content="http://icke.site/img/Array-arr++.png">
-<meta property="og:updated_time" content="2017-07-03T03:25:17.066Z">
+<meta property="og:updated_time" content="2017-07-03T08:15:29.589Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于arr[i++]与arr[++i]">
 <meta name="twitter:description" content="总结包含以下内容：i++和++i&amp;nbsp; 的区别，i++和++i&amp;nbsp; 在循环中的区别，arr[i++]和arr[++i]&amp;nbsp; 在循环中的区别，arr[i++]+=1和arr[++i]+=1&amp;nbsp; 在循环中的区别，arr[i++]的使用">
@@ -104,6 +104,13 @@ ga('send', 'pageview');
               <a href="https://github.com/ickedesign" target="_blank" >
                 <i class="icon icon-lg icon-github"></i>
                 Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://weibo.com/ickedesign" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
               </a>
             </li>
         
@@ -186,7 +193,7 @@ ga('send', 'pageview');
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>总结包含以下内容：<code>i++</code>和<code>++i</code>&nbsp; 的区别，<code>i++</code>和<code>++i</code>&nbsp; 在循环中的区别，<code>arr[i++]</code>和<code>arr[++i]</code>&nbsp; 在循环中的区别，<code>arr[i++]+=1</code>和<code>arr[++i]+=1</code>&nbsp; 在循环中的区别，<code>arr[i++]</code>的使用</p>
+            <p>总结包含以下内容：<code>i++</code>和<code>++i</code>&nbsp; 的区别，<code>i++</code>和<code>++i</code>&nbsp; 在循环中的区别，<code>arr[i++]</code>和<code>arr[++i]</code>&nbsp; 在循环中的区别，<code>arr[i++]+=1</code>和<code>arr[++i]+=1</code>&nbsp; 在循环中的区别，<code>arr[i++]</code>的使用<br><a id="more"></a></p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
@@ -194,7 +201,7 @@ ga('send', 'pageview');
                 </div>
                 <div class="image-caption">Array-arr++</div>
             </figure>
-<a id="more"></a>
+<hr>
 <p>前几天做Canvas倒计时的时候，慕课网的老师讲到了一个及时清除不在画布中的小球的做法。以下是实现代码：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//及时清空跳出画布的小球，优化页面的内存</span></div><div class="line"><span class="keyword">var</span> cnt=<span class="number">0</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;balls.length;i++)&#123;</div><div class="line">	<span class="keyword">if</span>(balls[i].x+radius&gt;<span class="number">0</span>&amp;&amp;balls[i].x-radius&lt;canvasWidth)&#123;</div><div class="line">		<span class="comment">//小球数组中的第0个到cnt-1个是在canvas画布中</span></div><div class="line">		balls[cnt++]=balls[i];</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//删除前面的数组使用balls.shift()</span></div><div class="line"><span class="keyword">while</span>(balls.length&gt;cnt)&#123;</div><div class="line">	balls.pop();<span class="comment">//删除第cnt个到balls.length-1个数组</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p><code>arr[i++]</code>是什么呢？于是开始一步一步地探索</p>
@@ -237,7 +244,7 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-07-03T03:25:17.066Z" itemprop="dateUpdated">2017-07-03 11:25:17</time>
+    最后更新时间：<time datetime="2017-07-03T08:15:29.589Z" itemprop="dateUpdated">2017-07-03 16:15:29</time>
 </span><br>
 
 
