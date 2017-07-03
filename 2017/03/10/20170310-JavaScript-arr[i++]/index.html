@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-92921333-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- End Google Analytics -->
+
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?f944b2dd33cbed8ecdfd058fc7893116"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    <link rel="canonical" href="http://icke.site/2017/03/10/20170310-JavaScript-arr[i++]/">
+    
+    
+    <title>关于arr[i++]与arr[++i] | Icke&#39;s Blog | 一个前端学习者</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JS,数组">
+    <meta name="description" content="总结包含以下内容：i++和++i&amp;nbsp; 的区别，i++和++i&amp;nbsp; 在循环中的区别，arr[i++]和arr[++i]&amp;nbsp; 在循环中的区别，arr[i++]+=1和arr[++i]+=1&amp;nbsp; 在循环中的区别，arr[i++]的使用">
+<meta name="keywords" content="JS,数组">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于arr[i++]与arr[++i]">
+<meta property="og:url" content="http://icke.site/2017/03/10/20170310-JavaScript-arr[i++]/index.html">
+<meta property="og:site_name" content="Icke&#39;s Blog">
+<meta property="og:description" content="总结包含以下内容：i++和++i&amp;nbsp; 的区别，i++和++i&amp;nbsp; 在循环中的区别，arr[i++]和arr[++i]&amp;nbsp; 在循环中的区别，arr[i++]+=1和arr[++i]+=1&amp;nbsp; 在循环中的区别，arr[i++]的使用">
+<meta property="og:image" content="http://icke.site/img/Array-arr++.png">
+<meta property="og:updated_time" content="2017-07-03T03:25:17.066Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于arr[i++]与arr[++i]">
+<meta name="twitter:description" content="总结包含以下内容：i++和++i&amp;nbsp; 的区别，i++和++i&amp;nbsp; 在循环中的区别，arr[i++]和arr[++i]&amp;nbsp; 在循环中的区别，arr[i++]+=1和arr[++i]+=1&amp;nbsp; 在循环中的区别，arr[i++]的使用">
+<meta name="twitter:image" content="http://icke.site/img/Array-arr++.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="Icke&#39;s Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.png">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Icke</h5>
+          <a href="mailto:szhibiao@gmail" title="szhibiao@gmail" class="mail">szhibiao@gmail</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/ickedesign" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">关于arr[i++]与arr[++i]</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="搜尋">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">关于arr[i++]与arr[++i]</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-03-10T07:07:20.000Z" itemprop="datePublished" class="page-time">
+  2017-03-10
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#i-和-i"><span class="post-toc-number">1.</span> <span class="post-toc-text">i++和++i</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#i-和-i-nbsp-在循环中的区别"><span class="post-toc-number">2.</span> <span class="post-toc-text">i++和++i  在循环中的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#arr-i-和arr-i-在循环中的区别"><span class="post-toc-number">3.</span> <span class="post-toc-text">arr[i++]和arr[++i]在循环中的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#arr-i-1和arr-i-1在循环中的区别"><span class="post-toc-number">4.</span> <span class="post-toc-text">arr[i++]+=1和arr[++i]+=1在循环中的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#arr-i-的使用"><span class="post-toc-number">5.</span> <span class="post-toc-text">arr[i++]的使用</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-20170310-JavaScript-arr[i++]"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">关于arr[i++]与arr[++i]</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-03-10 15:07:20" datetime="2017-03-10T07:07:20.000Z"  itemprop="datePublished">2017-03-10</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>总结包含以下内容：<code>i++</code>和<code>++i</code>&nbsp; 的区别，<code>i++</code>和<code>++i</code>&nbsp; 在循环中的区别，<code>arr[i++]</code>和<code>arr[++i]</code>&nbsp; 在循环中的区别，<code>arr[i++]+=1</code>和<code>arr[++i]+=1</code>&nbsp; 在循环中的区别，<code>arr[i++]</code>的使用</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/Array-arr++.png" alt="Array-arr++" title="">
+                </div>
+                <div class="image-caption">Array-arr++</div>
+            </figure>
+<a id="more"></a>
+<p>前几天做Canvas倒计时的时候，慕课网的老师讲到了一个及时清除不在画布中的小球的做法。以下是实现代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//及时清空跳出画布的小球，优化页面的内存</span></div><div class="line"><span class="keyword">var</span> cnt=<span class="number">0</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;balls.length;i++)&#123;</div><div class="line">	<span class="keyword">if</span>(balls[i].x+radius&gt;<span class="number">0</span>&amp;&amp;balls[i].x-radius&lt;canvasWidth)&#123;</div><div class="line">		<span class="comment">//小球数组中的第0个到cnt-1个是在canvas画布中</span></div><div class="line">		balls[cnt++]=balls[i];</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//删除前面的数组使用balls.shift()</span></div><div class="line"><span class="keyword">while</span>(balls.length&gt;cnt)&#123;</div><div class="line">	balls.pop();<span class="comment">//删除第cnt个到balls.length-1个数组</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>arr[i++]</code>是什么呢？于是开始一步一步地探索</p>
+<h3 id="i-和-i"><a href="#i-和-i" class="headerlink" title="i++和++i"></a>i++和++i</h3><p>大一的时候上java课，老师讲过了这样的题，想必学过计算机相关的都知道&nbsp; &nbsp; (/▽╲)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> b=<span class="number">2</span>;</div><div class="line">a=b++;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"a的值是："</span>+a+<span class="string">"，"</span>+<span class="string">"b的值是："</span>+b);</div><div class="line"><span class="comment">//"a的值是：2，b的值是：3"</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> c=<span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> d=<span class="number">2</span>;</div><div class="line">c=++d;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"c的值是："</span>+c+<span class="string">"，"</span>+<span class="string">"d的值是："</span>+d);</div><div class="line"><span class="comment">//"c的值是：3，d的值是：3"</span></div></pre></td></tr></table></figure>
+<p><code>a=b++</code>是b先把值赋给a，自身再加1；<code>a=++b</code>是b先自身加1，再把值赋给a</p>
+<h3 id="i-和-i-nbsp-在循环中的区别"><a href="#i-和-i-nbsp-在循环中的区别" class="headerlink" title="i++和++i&nbsp; 在循环中的区别"></a>i++和++i&nbsp; 在循环中的区别</h3><ul>
+<li><code>i++</code>在循环中的输出：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">  <span class="built_in">console</span>.log(i++);</div><div class="line">  <span class="comment">//依次输出0,2,4</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>++i</code>在循环中的输出：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">  <span class="built_in">console</span>.log(++i);</div><div class="line">  <span class="comment">//依次输出1,3,5</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="arr-i-和arr-i-在循环中的区别"><a href="#arr-i-和arr-i-在循环中的区别" class="headerlink" title="arr[i++]和arr[++i]在循环中的区别"></a>arr[i++]和arr[++i]在循环中的区别</h3><ul>
+<li><code>arr[i++]</code>在循环中的输出：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">   <span class="built_in">console</span>.log(arr[i++]);</div><div class="line">  <span class="comment">//依次输出11,13,15</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>arr[++i]</code>在循环中的输出：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">   <span class="built_in">console</span>.log(arr[++i]);</div><div class="line">  <span class="comment">//依次输出12,14,16</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果数组是奇数个，那么输出<code>arr[++i]</code>的最后一个数会是一个undefined </p>
+<h3 id="arr-i-1和arr-i-1在循环中的区别"><a href="#arr-i-1和arr-i-1在循环中的区别" class="headerlink" title="arr[i++]+=1和arr[++i]+=1在循环中的区别"></a>arr[i++]+=1和arr[++i]+=1在循环中的区别</h3><ul>
+<li><code>arr[i++]+=1</code>在循环中的输出：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">    arr[i++]+=<span class="number">1</span>;</div><div class="line">&#125; </div><div class="line"><span class="built_in">console</span>.log(arr);</div><div class="line"><span class="comment">//输出[2,2,4]</span></div></pre></td></tr></table></figure>
+<ul>
+<li><code>arr[++i]+=1</code>在循环中的输出：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">    arr[++i]+=<span class="number">1</span>;</div><div class="line">&#125; </div><div class="line"><span class="built_in">console</span>.log(arr);</div><div class="line"><span class="comment">//输出[1,3,3,NaN]</span></div></pre></td></tr></table></figure>
+<p>由于数组是奇数个，所以最后<code>arr[++i]+=1</code>最后的输出结果是NaN，可以通过以下的代码验证</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span>+<span class="number">1</span>);</div><div class="line"><span class="comment">//输出NaN</span></div></pre></td></tr></table></figure>
+<h3 id="arr-i-的使用"><a href="#arr-i-的使用" class="headerlink" title="arr[i++]的使用"></a>arr[i++]的使用</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[</div><div class="line">	&#123;<span class="attr">x</span>: <span class="number">1</span>&#125;,</div><div class="line">	&#123;<span class="attr">x</span>: <span class="number">5</span>&#125;,</div><div class="line">	&#123;<span class="attr">x</span>: <span class="number">9</span>&#125;,</div><div class="line">	&#123;<span class="attr">x</span>: <span class="number">3</span>&#125;,</div><div class="line">	&#123;<span class="attr">x</span>: <span class="number">10</span>&#125;,</div><div class="line">	&#123;<span class="attr">x</span>: <span class="number">6</span>&#125;</div><div class="line">]</div><div class="line"><span class="keyword">var</span> cnt=<span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">  <span class="keyword">if</span>(arr[i].x&lt;<span class="number">4</span>)&#123;</div><div class="line">    arr[cnt++]=arr[i]; </div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'cnt的值是'</span>+cnt+<span class="string">'，i的值是'</span>+i);</div><div class="line"></div><div class="line">    <span class="comment">//"cnt的值是1，i的值是0"</span></div><div class="line">    <span class="comment">//"cnt的值是2，i的值是3"</span></div><div class="line">  &#125;	</div><div class="line">&#125; </div><div class="line"><span class="keyword">while</span>(arr.length&gt;cnt)&#123;</div><div class="line">  arr.pop();</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(arr);</div><div class="line"></div><div class="line"><span class="comment">//   [</span></div><div class="line"><span class="comment">//     [object Object] &#123;x: 1&#125;, </span></div><div class="line"><span class="comment">//     [object Object] &#123;x: 3&#125;</span></div><div class="line"><span class="comment">//   ]</span></div></pre></td></tr></table></figure>
+<p>这说明了<strong>第0到cnt-1个留在arr中，cnt到arr.length-1的数组删除</strong>，使用这个技巧就可以来去除不符合判断语句的数组了</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最後更新時間：<time datetime="2017-07-03T03:25:17.066Z" itemprop="dateUpdated">2017-07-03 11:25:17</time>
+</span><br>
+
+
+        
+        原始链接：<a href="/2017/03/10/20170310-JavaScript-arr[i++]/" target="_blank" rel="external">http://icke.site/2017/03/10/20170310-JavaScript-arr[i++]/</a>
+        
+    </div>
+    <footer>
+        <a href="http://icke.site">
+            <img src="/img/avatar.jpg" alt="Icke">
+            Icke
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数组/">数组</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://icke.site/2017/03/10/20170310-JavaScript-arr[i++]/&title=《关于arr[i++]与arr[++i]》 — Icke's Blog&pic=http://icke.site/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://icke.site/2017/03/10/20170310-JavaScript-arr[i++]/&title=《关于arr[i++]与arr[++i]》 — Icke's Blog&source=总结包含以下内容：i++和++i&nbsp; 的区别，i++和++i&nbsp; 在循环中的区别，arr[i++]和arr[++i]&nbsp; 在循环中..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://icke.site/2017/03/10/20170310-JavaScript-arr[i++]/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《关于arr[i++]与arr[++i]》 — Icke's Blog&url=http://icke.site/2017/03/10/20170310-JavaScript-arr[i++]/&via=http://icke.site" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://icke.site/2017/03/10/20170310-JavaScript-arr[i++]/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/03/12/20170312-CSS-Study-CSS-Layout/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">CSS易混淆点小总结</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/03/09/20170309-Canvas-Countdown/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Canvas绚丽倒计时学习笔记</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+    <div id="cloud-tie-wrapper" class="comments cloud-tie-wrapper"></div>
+    <script>
+    var cloudTieConfig = {
+        url: 'http://icke.site/2017/03/10/20170310-JavaScript-arr[i++]/index.html',
+        sourceId: '20170310-JavaScript-arr[i++]',
+        productKey: '63e97e7d7f94429e86632efac839b253',
+        target: 'cloud-tie-wrapper',
+        pcFiles: [
+            '//unpkg.com/hexo-theme-material-indigo@latest/css/cloudTie/pc.css',
+            '//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/pc.min.js',
+        ],
+        mobileFiles: [
+            '//unpkg.com/hexo-theme-material-indigo@latest/css/cloudTie/mobile.css',
+            '//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/mobile.min.js'
+        ]
+    };
+    </script>
+    <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/loader.min.js"></script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢打赏~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat-reward.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>本部落格係採用<a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh_TW">創用 CC 姓名標示 4.0 國際 授權條款授權</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Icke &copy; 2017</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://icke.site/2017/03/10/20170310-JavaScript-arr[i++]/&title=《关于arr[i++]与arr[++i]》 — Icke's Blog&pic=http://icke.site/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://icke.site/2017/03/10/20170310-JavaScript-arr[i++]/&title=《关于arr[i++]与arr[++i]》 — Icke's Blog&source=总结包含以下内容：i++和++i&nbsp; 的区别，i++和++i&nbsp; 在循环中的区别，arr[i++]和arr[++i]&nbsp; 在循环中..." data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://icke.site/2017/03/10/20170310-JavaScript-arr[i++]/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《关于arr[i++]与arr[++i]》 — Icke's Blog&url=http://icke.site/2017/03/10/20170310-JavaScript-arr[i++]/&via=http://icke.site" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://icke.site/2017/03/10/20170310-JavaScript-arr[i++]/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKUlEQVR42u3aS27jMBAFwNz/0h5gVgNkZL3XVICYLK4C2ZJYXnT6w6+veL3+rqvr/67v15+664GFgYHxsYzX23XFSL5/deXqru/vyu/CwMA4gfE+yK6EwqufI8dH/wAwMDAwgq3MwnT+LgwMDIxZwH1PysMoBgYGRsLIi9J8Q23KuFL6YmBg7M1YL0R/7u8fnG9gYGB8CONVruQ5Kz/NbGFgYOzNaNO7pE2Wf7r+zJu6FgMDYwtG2/p/X3C2m8vvugnlGBgYWzNmATevKPO0L990cSwMAwNjC8YsdK4ML5Pt1kcxMDAwDmDMCs72QFiSILbpIwYGxgmMlQMQsyba7NBGPezEwMDYjjHbbvLN9rBXm5hiYGCcw5glf+0RilkK2D4ZAwPjNEZbQM6GAe3WMTAwMNbbavkAMrm3TgoxMDC2Y7TtsHXSrD13E3AxMDCOYbRhMW+3zUrc4r0YGBjHMJLQuTIqWElGb4ptDAyMrRnPHkhNttgOEvI0FAMDY1dGa006dm1hnI8HboIsBgbG1oynGmGzb7Z7+M+9GBgYWzPW41USdtsENC93Hwu7GBgYv5jxKld7aiNvnK0cPsPAwNibka/ZCCFP9fJ3YWBgnMnIg2z76Ho6Ud6FgYFxGmOl4Mzbam3JWiSFGBgYGMHWZ9fbI2JR1xADA+N4xqw+niWR+RgVAwPjBEY7DJj18NbL3ZuAi4GBsSnjgQJyNEKYJYVLGAwMjM9j/AEXc1bkteNOpwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

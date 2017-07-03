@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://icke.site/"/>
-  <updated>2017-07-02T17:02:58.821Z</updated>
+  <updated>2017-07-03T03:28:01.977Z</updated>
   <id>http://icke.site/</id>
   
   <author>
@@ -16,11 +16,125 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ES6语法学习笔记</title>
+    <link href="http://icke.site/2017/06/28/20170628-ES6-SyntaxLearning/"/>
+    <id>http://icke.site/2017/06/28/20170628-ES6-SyntaxLearning/</id>
+    <published>2017-06-28T02:47:03.000Z</published>
+    <updated>2017-07-03T03:28:01.977Z</updated>
+    
+    <content type="html"><![CDATA[<p>总结包含以下内容：<code>let</code>,<code>const</code>命令，解构赋值，正则扩展，字符串扩展，数值扩展，数组扩展，函数扩展，对象扩展，<code>Symbol</code>的用法，<code>Set</code>,<code>Map</code>数据结构，<code>Map</code>,<code>Set</code>与数组和对象的比较，<code>Ploxy</code>和<code>Reflect</code>，类和对象，<code>Promise</code>，<code>Iterator</code>和<code>for..of</code>循环，<code>Generator</code>，<code>Decorator</code>，模块化(更新完毕)</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/ES6-SyntaxLearning.png" alt="ES6-SyntaxLearning" title="">
+                </div>
+                <div class="image-caption">ES6-SyntaxLearning</div>
+            </figure>
+<hr>
+<a id="more"></a>
+<h3 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h3><blockquote>
+<p>笔记发布在了<a href="https://segmentfault.com/u/ickedesign/notes" target="_blank" rel="external">segmentFault</a>中，需要登录segmentFault才可查看</p>
+</blockquote>
+<ol>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009766450" target="_blank" rel="external">ES6语法学习—let,const命令</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009785135" target="_blank" rel="external">ES6语法学习—解构赋值</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009920767" target="_blank" rel="external">ES6语法学习—正则扩展</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009925853" target="_blank" rel="external">ES6语法学习—字符串扩展（上）</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009930420" target="_blank" rel="external">ES6语法学习—字符串扩展（下）</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009931542" target="_blank" rel="external">ES6语法学习—数值扩展</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009932308" target="_blank" rel="external">ES6语法学习—数组扩展</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009933815" target="_blank" rel="external">ES6语法学习—函数扩展</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009935089" target="_blank" rel="external">ES6语法学习—对象扩展</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009935885" target="_blank" rel="external">ES6语法学习—Symbol的用法</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009940150" target="_blank" rel="external">ES6语法学习—Set,Map数据结构</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009947939" target="_blank" rel="external">ES6语法学习—Map,Set与数组和对象的比较</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009951103" target="_blank" rel="external">ES6语法学习—Ploxy和Reflect</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009951937" target="_blank" rel="external">ES6语法学习—类和对象</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009953984" target="_blank" rel="external">ES6语法学习—Promise</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009954286" target="_blank" rel="external">ES6语法学习—Iterator和for…of循环</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009956808" target="_blank" rel="external">ES6语法学习—Generator</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009957041" target="_blank" rel="external">ES6语法学习—Decorators</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009959981" target="_blank" rel="external">ES6语法学习—模块化</a></li>
+</ol>
+<blockquote>
+<p>笔记也同步在我的<a href="https://github.com/ickedesign/ES6_SyntaxLearning" target="_blank" rel="external">Github</a></p>
+</blockquote>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;总结包含以下内容：&lt;code&gt;let&lt;/code&gt;,&lt;code&gt;const&lt;/code&gt;命令，解构赋值，正则扩展，字符串扩展，数值扩展，数组扩展，函数扩展，对象扩展，&lt;code&gt;Symbol&lt;/code&gt;的用法，&lt;code&gt;Set&lt;/code&gt;,&lt;code&gt;Map&lt;/code&gt;数据结构，&lt;code&gt;Map&lt;/code&gt;,&lt;code&gt;Set&lt;/code&gt;与数组和对象的比较，&lt;code&gt;Ploxy&lt;/code&gt;和&lt;code&gt;Reflect&lt;/code&gt;，类和对象，&lt;code&gt;Promise&lt;/code&gt;，&lt;code&gt;Iterator&lt;/code&gt;和&lt;code&gt;for..of&lt;/code&gt;循环，&lt;code&gt;Generator&lt;/code&gt;，&lt;code&gt;Decorator&lt;/code&gt;，模块化(更新完毕)&lt;/p&gt;
+&lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                    &lt;img src=&quot;/img/ES6-SyntaxLearning.png&quot; alt=&quot;ES6-SyntaxLearning&quot; title=&quot;&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;image-caption&quot;&gt;ES6-SyntaxLearning&lt;/div&gt;
+            &lt;/figure&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+    
+      <category term="JS" scheme="http://icke.site/tags/JS/"/>
+    
+      <category term="ES6" scheme="http://icke.site/tags/ES6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《JavaScript设计模式与开发实践》读书笔记</title>
+    <link href="http://icke.site/2017/06/14/20170614-JavaScript-JS_Pattern/"/>
+    <id>http://icke.site/2017/06/14/20170614-JavaScript-JS_Pattern/</id>
+    <published>2017-06-14T13:57:00.000Z</published>
+    <updated>2017-07-03T03:21:54.365Z</updated>
+    
+    <content type="html"><![CDATA[<p>总结包含以下内容：第二章 this、call和apply，等等（待更新）</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/JS_Pattern.png" alt="JS_Pattern" title="">
+                </div>
+                <div class="image-caption">JS_Pattern</div>
+            </figure>
+<hr>
+<a id="more"></a>
+<h3 id="学习笔记"><a href="#学习笔记" class="headerlink" title="学习笔记"></a>学习笔记</h3><blockquote>
+<p>笔记发布在了segmentFault中</p>
+</blockquote>
+<ol>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009783785" target="_blank" rel="external">《JavaScript设计模式与开发实践》读书笔记—第二章 this、call和apply</a></li>
+<li>&nbsp;&nbsp;<a href="https://segmentfault.com/n/1330000009878023" target="_blank" rel="external">《JavaScript设计模式与开发实践》读书笔记—第三章 闭包</a></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;总结包含以下内容：第二章 this、call和apply，等等（待更新）&lt;/p&gt;
+&lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                    &lt;img src=&quot;/img/JS_Pattern.png&quot; alt=&quot;JS_Pattern&quot; title=&quot;&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;image-caption&quot;&gt;JS_Pattern&lt;/div&gt;
+            &lt;/figure&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+    
+      <category term="JS" scheme="http://icke.site/tags/JS/"/>
+    
+      <category term="设计模式" scheme="http://icke.site/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Web安全-XSS的攻击和防范</title>
     <link href="http://icke.site/2017/06/11/20170611-XSS-WebSecurity/"/>
     <id>http://icke.site/2017/06/11/20170611-XSS-WebSecurity/</id>
     <published>2017-06-11T12:00:03.000Z</published>
-    <updated>2017-07-02T17:02:58.821Z</updated>
+    <updated>2017-07-03T03:13:52.119Z</updated>
     
     <content type="html"><![CDATA[<p>总结包含以下内容：了解XSS的攻击方式和防范措施，并进行实战</p>
 <figure class="image-bubble">
@@ -120,6 +234,1204 @@
     
     
       <category term="XSS" scheme="http://icke.site/tags/XSS/"/>
+    
+      <category term="Web安全" scheme="http://icke.site/tags/Web%E5%AE%89%E5%85%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>移动端ICON制作、性能陷阱和硬件加速</title>
+    <link href="http://icke.site/2017/05/25/20170525-HTML5-Performance/"/>
+    <id>http://icke.site/2017/05/25/20170525-HTML5-Performance/</id>
+    <published>2017-05-24T17:20:20.000Z</published>
+    <updated>2017-07-03T03:24:24.249Z</updated>
+    
+    <content type="html"><![CDATA[<p>总结包含以下内容：基于HTML5,浅谈移动端ICON制作、性能陷阱和硬件加速</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/HTML5Performance.png" alt="HTML5Performance" title="">
+                </div>
+                <div class="image-caption">HTML5Performance</div>
+            </figure>
+<hr>
+<a id="more"></a>
+<h3 id="ICON制作"><a href="#ICON制作" class="headerlink" title="ICON制作"></a>ICON制作</h3><ul>
+<li>使用Base64格式的图片制作ICON<ul>
+<li>可减少请求，加快首屏数据的显示速度，但体积大，未压缩，不易维护 </li>
+</ul>
+</li>
+<li>CSS3制作ICON<ul>
+<li>在手机端的兼容性很好，体积小，但一般用在规则的图形 </li>
+</ul>
+</li>
+</ul>
+<h3 id="移动端性能陷阱"><a href="#移动端性能陷阱" class="headerlink" title="移动端性能陷阱"></a>移动端性能陷阱</h3><ul>
+<li>1、在PC时代会将<code>&lt;script&gt;</code>标签放在<code>&lt;body&gt;</code>的最底部，在移动端时代：<ul>
+<li>减少或避免repaint(页面重绘),reflow(页面回流)。会触发repaint的操作：比如样式上的变化，会触发reflow的操作：比如位置的改变</li>
+<li>减少对DOM元素的操作（框架的做法是将DOM操作从DOM文档流中提取出来）</li>
+<li>尽量缓存可以缓存的数据 </li>
+</ul>
+</li>
+<li><p>2、在PC时代使用一般使用http来缓存(比如ResponseHeaders的Cache-Control等)，在移动端时代：</p>
+<ul>
+<li><p>localStorage（只能存储字符串，否则需要做序列化的处理） </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">localStorage.setItem(<span class="string">'data_1'</span>,<span class="built_in">JSON</span>.stringify(&#123;<span class="attr">a</span>:<span class="number">1</span>&#125;));</div><div class="line">localStorage.getItem(<span class="string">'data_1'</span>);<span class="comment">//"&#123;"a":1&#125;"</span></div><div class="line"><span class="built_in">JSON</span>.parse(localStorage.getItem(<span class="string">'data_1'</span>))<span class="comment">//Object &#123;a: 1&#125;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>sessionStorage（会话级别的存储）</p>
+</li>
+<li>indexedDB(存大量数据，可建立索引) </li>
+</ul>
+</li>
+<li>3、使用CSS3 transform代替DOM操作，CSS3 transform由浏览器引擎底层提供渲染</li>
+</ul>
+<h3 id="非主流的硬件加速方法："><a href="#非主流的硬件加速方法：" class="headerlink" title="非主流的硬件加速方法："></a>非主流的硬件加速方法：</h3><ul>
+<li>不要给非static定位元素增加CSS3动画（比如：absolute、relative） </li>
+<li>适当地使用硬件加速（比如GPU），比如用Canvas绘画可触发GPU，加<code>transform: translate3d(0,0,0)</code></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;总结包含以下内容：基于HTML5,浅谈移动端ICON制作、性能陷阱和硬件加速&lt;/p&gt;
+&lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                    &lt;img src=&quot;/img/HTML5Performance.png&quot; alt=&quot;HTML5Performance&quot; title=&quot;&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;image-caption&quot;&gt;HTML5Performance&lt;/div&gt;
+            &lt;/figure&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+    
+      <category term="HTML5" scheme="http://icke.site/tags/HTML5/"/>
+    
+      <category term="WEB APP" scheme="http://icke.site/tags/WEB-APP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML5 WEB APP的使用</title>
+    <link href="http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/"/>
+    <id>http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/</id>
+    <published>2017-05-17T02:34:30.000Z</published>
+    <updated>2017-07-03T03:24:37.245Z</updated>
+    
+    <content type="html"><![CDATA[<p>总结包含以下内容：HTML5的应用场景，HTML5对比Native的优势，WEB+APP发展现状，HTML5 WEB APP的发展趋势</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/HTML5Analysis.png" alt="HTML5Analysis" title="">
+                </div>
+                <div class="image-caption">HTML5Analysis</div>
+            </figure>
+<hr>
+<a id="more"></a>
+<h3 id="HTML5的应用场景"><a href="#HTML5的应用场景" class="headerlink" title="HTML5的应用场景"></a>HTML5的应用场景</h3><ul>
+<li>PC端：LocalStorage本地存储(渐强式体验：对支持HTML5的浏览器使用LocalStorage)</li>
+<li>手机端：<ul>
+<li>基于Web View的Web Hybrid Native开发，优点是更新比较灵活</li>
+<li>Web App开发：H5广告，H5游戏，H5网站</li>
+</ul>
+</li>
+</ul>
+<h3 id="HTML5对比Native的优势"><a href="#HTML5对比Native的优势" class="headerlink" title="HTML5对比Native的优势"></a>HTML5对比Native的优势</h3><ul>
+<li>HTML5提供了符合语义化的标签，比如：<code>&lt;article&gt;</code>、<code>&lt;section&gt;</code>、<code>&lt;header&gt;</code>、<code>&lt;output&gt;</code>、<code>&lt;figure&gt;</code>、<code>&lt;footer&gt;</code></li>
+<li>对API更好的支持：SessionStorage、WebGL、Web Workers、Canvas</li>
+<li>Native虽然使用流畅，但更新慢，在App Store中还需审核。可以试想一下一次开发多终端受益（嵌在Web View中）  </li>
+</ul>
+<h3 id="WEB-APP发展现状"><a href="#WEB-APP发展现状" class="headerlink" title="WEB+APP发展现状"></a>WEB+APP发展现状</h3><ul>
+<li>现状：不能一次开发多终端适配<ul>
+<li>在PC时代，多终端适配指浏览器适配</li>
+<li>在移动端时代，其指手机系统的适配（Antroid、Apple的按键使用不同，比如返回键）</li>
+</ul>
+</li>
+<li>Native App与Hybrid App的体验差：动画方面和DPM操作<ul>
+<li>手机的CPU（计算）和GPU（图形渲染）比PC慢</li>
+</ul>
+</li>
+<li>Native App在手机端的效果比较好的原因：<ul>
+<li>在WEB APP和Hybrid App上的编译过程是：JS编译成JAVA再编译成机器语言，最后运行</li>
+<li>Native App没有编译过程，性能快很多</li>
+<li>因此目前网页的性能是不能匹敌Native App的</li>
+</ul>
+</li>
+<li>提出一次开发多终端适配的原因：<ul>
+<li>Media Query的出现，针对设备分辨率进行适配，出现响应式页面。但这需要在性能和效果之间做出权衡</li>
+<li>CSS3：在HTML5时代使用CSS3的animation属性来代替DOM的动画操作。例如用transform接口来实现手机Web页面的Tab切换  </li>
+</ul>
+</li>
+</ul>
+<h3 id="HTML5-WEB-APP的发展趋势"><a href="#HTML5-WEB-APP的发展趋势" class="headerlink" title="HTML5 WEB APP的发展趋势"></a>HTML5 WEB APP的发展趋势</h3><ul>
+<li>WEB APP正在尝试无限接近Native App<ul>
+<li>FaceBook之前不断使用HTML5技术去更新APP，后来出现了APP卡顿的现象，继而使用Native技术去替换更新。这是一次尝试</li>
+</ul>
+</li>
+<li>与HTML5有关的框架是React<ul>
+<li>通过JS来编写逻辑，通过Native实现界面效果</li>
+<li>Native用来构建User Interface，即用户界面，解决了Web App的一个痛点，即构建页面的性能平均问题  </li>
+</ul>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;总结包含以下内容：HTML5的应用场景，HTML5对比Native的优势，WEB+APP发展现状，HTML5 WEB APP的发展趋势&lt;/p&gt;
+&lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                    &lt;img src=&quot;/img/HTML5Analysis.png&quot; alt=&quot;HTML5Analysis&quot; title=&quot;&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;image-caption&quot;&gt;HTML5Analysis&lt;/div&gt;
+            &lt;/figure&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+    
+      <category term="HTML5" scheme="http://icke.site/tags/HTML5/"/>
+    
+      <category term="WEB APP" scheme="http://icke.site/tags/WEB-APP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS易混淆点小总结</title>
+    <link href="http://icke.site/2017/03/12/20170312-CSS-Study-CSS-Layout/"/>
+    <id>http://icke.site/2017/03/12/20170312-CSS-Study-CSS-Layout/</id>
+    <published>2017-03-12T14:53:30.000Z</published>
+    <updated>2017-07-03T03:23:51.330Z</updated>
+    
+    <content type="html"><![CDATA[<p>总结包含以下内容：CSS hack、清除浮动(clearfix hack)、CSS伪类和伪元素、<code>Box-Sizing</code>、水平居中和垂直居中、em和rem的区别、<code>max-width</code>、@media媒体查询、<code>columns</code>、@import加载CSS文件和link的区别、使用CDN、Flex布局</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/Study-CSS-Layout.png" alt="Study CSS Layout" title="">
+                </div>
+                <div class="image-caption">Study CSS Layout</div>
+            </figure>
+<hr>
+<a id="more"></a>
+<h3 id="CSS-hack"><a href="#CSS-hack" class="headerlink" title="CSS hack"></a>CSS hack</h3><p>因为不同浏览器对CSS的兼容不同，所以需要hack来对CSS做一些兼容。常用的有四种方法：</p>
+<ul>
+<li><p><strong>条件注释法</strong></p>
+<p>在使用Bootstrap时，经常可以在<code>&lt;head&gt;&lt;/head&gt;</code>中看到有以下这段：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--[if lt IE 9]&gt;</span></div><div class="line">  &lt;script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"&gt;&lt;/script&gt;</div><div class="line">  &lt;script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"&gt;&lt;/script&gt;</div><div class="line">&lt;![endif]--&gt;</div></pre></td></tr></table></figure>
+<p>这就是条件注释法，把其中的内容换成link链接即可。条件注释法还有兼容其它IE浏览器的写法：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--[if !IE]&gt; 除IE外都可识别&lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if IE]&gt; 所有的IE可识别 &lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if IE 6]&gt; 仅IE6可识别 &lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if lt IE 6]&gt; IE6以及IE6以下版本可识别 &lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if gte IE 6]&gt; IE6以及IE6以上版本可识别 &lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if IE 7]&gt; 仅IE7可识别 &lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if lt IE 7]&gt; IE7以及IE7以下版本可识别 &lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if gte IE 7]&gt; IE7以及IE7以上版本可识别 &lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if IE 8]&gt; 仅IE8可识别 &lt;![endif]--&gt;</span></div><div class="line"><span class="comment">&lt;!--[if IE 9]&gt; 仅IE9可识别 &lt;![endif]--&gt;</span></div></pre></td></tr></table></figure>
+<p>正确的CSS hack的一种写法是：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"css1.css"</span> /&gt;</span></div><div class="line"><span class="comment">&lt;!--[if lt IE 9]&gt;&lt;link rel="stylesheet" type="text/css" href="css2.css" /&gt;&lt;![endif]--&gt;</span></div></pre></td></tr></table></figure>
+<p>解释一下最上方的Bootstrap代码：</p>
+<ul>
+<li>html5shiv主要解决HTML5提出的新的元素不被IE6-8识别，这些新元素不能作为父节点包裹子元素，并且不能应用CSS样式。让CSS 样式应用在未知元素上只需执行 <code>document.createElement(elementName)</code> 即可实现。html5shiv就是根据这个原理创建的</li>
+<li>引入respond.js，让低浏览器支持css3的新属性，比如<code>@media</code>媒体查询的使用。使用respond.js注意以下几点：<ul>
+<li>Respond.js 与 跨域（cross-domain） CSS 的问题，解决方法：<a href="https://my.oschina.net/ximidao/blog/349130" target="_blank" rel="external">样式文件跨域导致Respond.js插件在IE浏览器失效的问题</a></li>
+<li>Respond.js 与 file:// 协议，由于浏览器的安全机制，Respond.js 不能在通过 file:// 协议（打开本地HTML文件所用的协议）访问的页面上发挥正常的功能。如果需要测试 IE8 下面的响应式特性，务必通过 http 协议访问页面（例如搭建 apache、nginx 等）。</li>
+<li>Respond.js 与 <code>@import</code> 指令，Respond.js不支持通过 <code>@import</code>指令所引入的 CSS 文件。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>类内属性前缀法</strong><br>在CSS样式属性名前加上一些只有特定浏览器才能识别的hack前缀，以达到预期的页面展现效果<br>比如：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">background-color</span><span class="selector-pseudo">:blue</span> !<span class="selector-tag">important</span>;<span class="comment">/* All browsers but IE6 */</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>选择器前缀法</strong><br>比如<code>\*html</code>， <code>\*</code>前缀只对IE6生效</p>
+</li>
+<li><strong>CSS3选择器结合JavaScript的Hack</strong></li>
+</ul>
+<blockquote>
+<p>以上更详细的解释，请点击<a href="http://blog.csdn.net/freshlover/article/details/12132801" target="_blank" rel="external">史上最全的CSS hack方式一览</a>  </p>
+</blockquote>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="http://www.cnblogs.com/mfc-itblog/p/5848686.html" target="_blank" rel="external">条件注释判断浏览器版本</a></li>
+<li><a href="http://baike.baidu.com/link?url=_UPT1rXcCbCML6SwcWZEKYCx1PrQa4xbkNlvxWt1yhtiu9TPrIgo9X0pTlmv88zVPpjhioXDgNgfO6rKqn7DPMtte53yL0sUnkfb0X-nAtq" target="_blank" rel="external">Html5shiv</a></li>
+<li><a href="http://v3.bootcss.com/getting-started/#support" target="_blank" rel="external">Bootsrap对浏览器和设备的支持情况</a></li>
+<li><a href="http://blog.csdn.net/freshlover/article/details/12132801" target="_blank" rel="external">史上最全的CSS hack方式一览</a></li>
+</ul>
+<h3 id="清除浮动-clearfix-hack"><a href="#清除浮动-clearfix-hack" class="headerlink" title="清除浮动(clearfix hack)"></a>清除浮动(clearfix hack)</h3><p>以下是Bootsrap下的写法<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.clearfix</span> &#123; </div><div class="line">	<span class="attribute">zoom</span>: <span class="number">1</span>; </div><div class="line">&#125; </div><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:before</span>, </div><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123; </div><div class="line">	<span class="attribute">display</span>: table; </div><div class="line">	<span class="attribute">line-height</span>: <span class="number">0</span>; </div><div class="line">	<span class="attribute">content</span>: <span class="string">""</span>; </div><div class="line">&#125; </div><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123; </div><div class="line">	<span class="attribute">clear</span>: both; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>奇舞团的老师在慕课网上讲课时，使用的是以下的方法<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span> &#123;</div><div class="line">	<span class="attribute">content</span>: <span class="string">"."</span>;</div><div class="line">	<span class="attribute">display</span>: block;</div><div class="line">	<span class="attribute">height</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">clear</span>: both;</div><div class="line">	<span class="attribute">visibility</span>: hidden;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.clearfix</span> &#123;<span class="attribute">display</span>: inline-block;&#125;</div><div class="line">* <span class="selector-tag">html</span> <span class="selector-class">.clearfix</span> &#123;<span class="attribute">height</span>: <span class="number">1%</span>;&#125;</div><div class="line"><span class="selector-class">.clearfix</span> &#123;<span class="attribute">display</span>: block;&#125;</div></pre></td></tr></table></figure></p>
+<p>更详细的clearfix hack，请点击<a href="http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use" target="_blank" rel="external">What methods of ‘clearfix’ can I use?</a>。但肯定的是，为了不破坏HTML的文档结构，clearfix hack要使用CSS的伪元素<code>:before</code>和<code>:after</code></p>
+<h4 id="参考资料-1"><a href="#参考资料-1" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="http://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use" target="_blank" rel="external">What methods of ‘clearfix’ can I use?</a></li>
+</ul>
+<h3 id="CSS伪类和伪元素"><a href="#CSS伪类和伪元素" class="headerlink" title="CSS伪类和伪元素"></a>CSS伪类和伪元素</h3><p>1.<code>:after</code>/<code>::after</code>和<code>:before</code>/<code>::before</code>都是CSS伪元素，与<code>:hover</code>/<code>:active</code>等伪类不一样。<br>2.<code>:before</code>/<code>:after</code>伪元素是在CSS2中提出来的，所以兼容性到IE8了。<br>3.<code>::before</code>/<code>::after</code>是CSS3中的写法，为了将伪类和伪元素区分开。但是平时为了兼容性，还是会用一个冒号的写法</p>
+<p>想了解更多，请点击<a href="http://www.w3school.com.cn/css/css_pseudo_elements.asp" target="_blank" rel="external">CSS 伪元素</a>和<a href="http://www.w3school.com.cn/css/css_pseudo_classes.asp" target="_blank" rel="external">CSS 伪类</a></p>
+<ul>
+<li><p>关于伪类<code>:before</code>和<code>:after</code>中content的内容</p>
+<ul>
+<li><p>[String]，使用引号包括一段字符串，将会向元素内容中添加字符串。示例： </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:after</span> &#123; <span class="attribute">content</span>: <span class="string">"↗"</span>; &#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>attr()，调用当前元素的属性，可以方便的比如将图片的 Alt 提示文字或者链接的 Href 地址显示出来。示例：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:after</span> &#123; </div><div class="line">	<span class="attribute">content</span>:<span class="string">"("</span> <span class="built_in">attr</span>(href) <span class="string">")"</span>; </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>url()或uri()，用于引用媒体文件。示例：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">h1</span><span class="selector-pseudo">:before</span> &#123; </div><div class="line">	<span class="attribute">content</span>: <span class="built_in">url</span>(logo.png); </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>counter()，调用计数器，可以不使用列表元素实现序号功能。具体请参见 counter-increment 和 counter-reset 属性的用法。示例： </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">h2</span><span class="selector-pseudo">:before</span> &#123; </div><div class="line">	<span class="attribute">counter-increment</span>: chapter; </div><div class="line">	<span class="attribute">content</span>: <span class="string">"Chapter "</span> <span class="built_in">counter</span>(chapter) <span class="string">". "</span> </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>伪类元素<code>:nth-child()</code> 和<code>:nth-of-type()</code></p>
+<ul>
+<li><code>:nth-child()</code>:做手机网站的时候，由于手机网站对浏览器兼容要求相对较低，手机浏览器大部分都支持css3，这就大大提高了开发效率。可以随意使用CSS3<code>:nth-child()</code>伪类选择器。IE9及以上版本，火狐，谷歌，Safari ，Opera都支持<code>:nth-child()</code></li>
+<li><code>:nth-child(n)</code>与<code>:nth-of-type(n)</code>的区别</li>
+<li><code>ele:nth-child(n)</code> 选择器匹配属于其父元素的第n个子元素，不论元素的类型。n 可以是数字、关键词或公式。比如<code>ele:nth-child(odd)</code>,即匹配序号为奇数的元素</li>
+<li><code>ele:nth-of-type(n)</code> 选择器的意思是“规定属于其父元素的第n个ele元素”</li>
+</ul>
+</li>
+</ul>
+<h4 id="参考资料-2"><a href="#参考资料-2" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="http://blog.csdn.net/u013778905/article/details/52901880" target="_blank" rel="external">:after/::after和:before/::before的区别</a></li>
+<li><a href="http://www.haorooms.com/post/css_wl_wys" target="_blank" rel="external">谈谈css的伪类和伪元素</a></li>
+<li><a href="http://www.haorooms.com/post/css3_nth-child" target="_blank" rel="external">CSS3的nth-child()选择器</a></li>
+</ul>
+<h3 id="Box-Sizing"><a href="#Box-Sizing" class="headerlink" title="Box-Sizing"></a>Box-Sizing</h3><ul>
+<li><p><code>box-sizing</code>属性可以为三个值之一：<code>content-box</code>（default），<code>border-box</code>，<code>padding-box</code><br><code>content-box</code>，border和padding不计算入width之内<br><code>padding-box</code>，padding计算入width内<br><code>border-box</code>，border和padding计算入width之内，其实就是怪异模式了</p>
+</li>
+<li><p>ie8+浏览器支持content-box和border-box，ff则支持全部三个值</p>
+</li>
+<li><p>个人推荐使用<code>border-box</code>，因为<code>padding-box</code>只能在ff中得到支持</p>
+</li>
+</ul>
+<h4 id="参考资料-3"><a href="#参考资料-3" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="http://www.cnblogs.com/zhaoran/archive/2013/05/24/3097482.html" target="_blank" rel="external">css3 box-sizing属性</a></li>
+</ul>
+<h3 id="水平居中和垂直居中"><a href="#水平居中和垂直居中" class="headerlink" title="水平居中和垂直居中"></a>水平居中和垂直居中</h3><p>水平居中和垂直居中要分三种情况来分析，一是<code>display</code>类型，二是单行还是多行居中，三是是否事先知道对象的宽高。更加详细请戳参考资料</p>
+<h4 id="参考资料-4"><a href="#参考资料-4" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="http://manyu.site/2015/12/18/about-center1/" target="_blank" rel="external">关于居中一</a></li>
+<li><a href="http://manyu.site/2015/12/18/about-center2/" target="_blank" rel="external">关于居中二</a></li>
+</ul>
+<h3 id="em和rem的区别"><a href="#em和rem的区别" class="headerlink" title="em和rem的区别"></a>em和rem的区别</h3><ul>
+<li>em的参考对象是父级元素<ul>
+<li>任意浏览器的默认字体高都是16px，为了简化font-size的换算，需要在css中的body选择器中声明 Font-size=62.5%，这就使em值变为 16px*62.5%=10px, 这样12px=1.2em, 10px=1em, 也就是说只需要将你的原来的px数值除以10，然后换上em作为单位就行了</li>
+</ul>
+</li>
+<li>rem是CSS3新增的一个相对对象，参考对象是HTML对象的根元素<ul>
+<li>除了IE8及更早版本外，所有浏览器均已支持rem。对于不支持它的浏览器，应对方法也很简单，就是多写一个绝对单位的声明。这些浏览器会忽略用rem设定的字体大小</li>
+<li>使用 rem 单位的主要目的应该是确保无论用户如何设置自己的浏览器，我们的布局都能调整到合适大小。</li>
+</ul>
+</li>
+<li>注意不要在多列布局中使用em或rem,改用%。什么时候使用em和rem可以戳一下参考资料链接 <h4 id="参考资料-5"><a href="#参考资料-5" class="headerlink" title="参考资料"></a>参考资料</h4></li>
+<li><a href="http://www.w3cplus.com/css/when-to-use-em-vs-rem.html" target="_blank" rel="external">何时使用 Em 与 Rem</a></li>
+</ul>
+<h3 id="max-width"><a href="#max-width" class="headerlink" title="max-width"></a>max-width</h3><p>使用<code>max-width</code>替代<code>width</code>可以使浏览器更好地处理小窗口的情况。这点在移动设备上显得尤为重要，调整下浏览器窗口大小可以检查一下。<br>顺便提下， 所有的主流浏览器包括IE7+在内都支持<code>max-width</code>所以放心大胆的用吧</p>
+<h3 id="media媒体查询"><a href="#media媒体查询" class="headerlink" title="@media媒体查询"></a>@media媒体查询</h3><p>基本格式如以下说示<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@media (min-width: 768px)&#123; //&gt;=768的设备 &#125;</div><div class="line">@media (min-width: 992px)&#123; //&gt;=992的设备 &#125;</div><div class="line">@media (min-width: 1200)&#123; //&gt;=1200的设备 &#125;</div></pre></td></tr></table></figure></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@media (max-width: 1199)&#123; //&lt;=1199的设备 &#125;</div><div class="line">@media (max-width: 991px)&#123; //&lt;=991的设备 &#125;</div><div class="line">@media (max-width: 767px)&#123; //&lt;=768的设备 &#125;</div></pre></td></tr></table></figure>
+<p>注意大小的顺序，另外也可以这么使用，如以下</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">media</span> screen and (min-width: <span class="number">960px</span>) and (max-width: <span class="number">1199px</span>) &#123;</div><div class="line">    <span class="selector-id">#page</span>&#123; <span class="attribute">width</span>: <span class="number">960px</span>; &#125;<span class="selector-id">#content</span>,<span class="selector-class">.div1</span>&#123;<span class="attribute">width</span>: <span class="number">650px</span>;&#125;<span class="selector-id">#secondary</span>&#123;<span class="attribute">width</span>:<span class="number">250px</span>&#125;<span class="selector-tag">select</span>&#123;<span class="attribute">max-width</span>:<span class="number">200px</span>&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>使用<code>@media</code>就能做出自适应的布局了</p>
+<h4 id="参考资料-6"><a href="#参考资料-6" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="http://www.cnblogs.com/xcxc/p/4531846.html" target="_blank" rel="external">利用@media screen实现网页布局的自适应</a></li>
+</ul>
+<h3 id="columns"><a href="#columns" class="headerlink" title="columns"></a>columns</h3><ul>
+<li><code>columns</code>是CSS3的新属性，Internet Explorer 9 以及更早版本的浏览器不支持 column 属性。</li>
+<li>属性有<code>Column-count</code>(列的数目)、<code>Column-gap</code>(列的间隔)、<code>Column-width</code>(列的宽度)和<code>Column-rule</code></li>
+<li>前缀 <code>-webkit-</code>,<code>-moz-</code></li>
+</ul>
+<h4 id="参考资料-7"><a href="#参考资料-7" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="http://www.w3school.com.cn/cssref/pr_columns.asp" target="_blank" rel="external">CSS3 columns 属性</a></li>
+</ul>
+<h3 id="import加载CSS文件和link的区别"><a href="#import加载CSS文件和link的区别" class="headerlink" title="@import加载CSS文件和link的区别"></a>@import加载CSS文件和link的区别</h3><p>个人觉得比较重要的五个不同如以下所示：</p>
+<ul>
+<li><p>引用的方式不同<br>link(外部引用):</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"xxx.css"</span>  <span class="attr">type</span>=<span class="string">"text/css"</span>   /  &gt;</span></div></pre></td></tr></table></figure>
+<p>@import(导入式):<code>@import url(xxx.css);</code></p>
+</li>
+<li><p>放置的位置不同<br>link一般放在head标签中</p>
+<p><code>@import</code>必须放在<code>&lt;style  type=&quot;text/css&quot;&gt;</code>标签中</p>
+</li>
+<li>加载内容不同<br>link可以加载除了css文件外，还可以加载MIME类型的文件</li>
+<li>当使用 Javascript 控制 DOM 去改变样式的时候，只能使用 link 方式，因为<code>@import</code>眼里只有CSS，不是 DOM 可以控制的；</li>
+<li>加载方式不同<br>link会和dom结构一同加载渲染<br><code>@import</code>只能等dom结构加载完成以后才能渲染页面</li>
+</ul>
+<h4 id="参考资料-8"><a href="#参考资料-8" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="http://blog.csdn.net/u013243347/article/details/52642130" target="_blank" rel="external">外部引用css时，link和@import两种区别</a></li>
+</ul>
+<h3 id="使用CDN"><a href="#使用CDN" class="headerlink" title="使用CDN"></a>使用CDN</h3><ul>
+<li>什么是CDN<br>CDN的全称是Content Delivery Network，即内容分发网络。是通过在现有的 Internet 中增加一层新的网络架构，将网站的内容发布到最接近用户的网络 “ 边缘 “ ，使用户可以就近取得所需的内容，解决 Internet 网络拥塞状况，提高用户访问网站的响应速度。从技术上全面解决由于网络带宽小、用户访问量大、网点分布不均等原因，造成的用户访问网站的响应速度慢的问题</li>
+<li>使用CDN有利有弊</li>
+</ul>
+<h4 id="参考资料-9"><a href="#参考资料-9" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="http://www.cnblogs.com/flashlm/archive/2009/05/24/cdnticks.html" target="_blank" rel="external">CDN使用心得</a></li>
+</ul>
+<h3 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a>Flex布局</h3><p>Flex布局可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能。兼容IE10+。了解更多请看下阮一峰老师的教程。</p>
+<h4 id="参考资料-10"><a href="#参考资料-10" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="external">Flex 布局教程：语法篇</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/07/flex-examples.html" target="_blank" rel="external">Flex 布局教程：实例篇</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;总结包含以下内容：CSS hack、清除浮动(clearfix hack)、CSS伪类和伪元素、&lt;code&gt;Box-Sizing&lt;/code&gt;、水平居中和垂直居中、em和rem的区别、&lt;code&gt;max-width&lt;/code&gt;、@media媒体查询、&lt;code&gt;columns&lt;/code&gt;、@import加载CSS文件和link的区别、使用CDN、Flex布局&lt;/p&gt;
+&lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                    &lt;img src=&quot;/img/Study-CSS-Layout.png&quot; alt=&quot;Study CSS Layout&quot; title=&quot;&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;image-caption&quot;&gt;Study CSS Layout&lt;/div&gt;
+            &lt;/figure&gt;
+&lt;hr&gt;
+    
+    </summary>
+    
+    
+      <category term="CSS" scheme="http://icke.site/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于arr[i++]与arr[++i]</title>
+    <link href="http://icke.site/2017/03/10/20170310-JavaScript-arr%5Bi++%5D/"/>
+    <id>http://icke.site/2017/03/10/20170310-JavaScript-arr[i++]/</id>
+    <published>2017-03-10T07:07:20.000Z</published>
+    <updated>2017-07-03T03:25:17.066Z</updated>
+    
+    <content type="html"><![CDATA[<p>总结包含以下内容：<code>i++</code>和<code>++i</code>&nbsp; 的区别，<code>i++</code>和<code>++i</code>&nbsp; 在循环中的区别，<code>arr[i++]</code>和<code>arr[++i]</code>&nbsp; 在循环中的区别，<code>arr[i++]+=1</code>和<code>arr[++i]+=1</code>&nbsp; 在循环中的区别，<code>arr[i++]</code>的使用</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/Array-arr++.png" alt="Array-arr++" title="">
+                </div>
+                <div class="image-caption">Array-arr++</div>
+            </figure>
+<a id="more"></a>
+<p>前几天做Canvas倒计时的时候，慕课网的老师讲到了一个及时清除不在画布中的小球的做法。以下是实现代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//及时清空跳出画布的小球，优化页面的内存</span></div><div class="line"><span class="keyword">var</span> cnt=<span class="number">0</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;balls.length;i++)&#123;</div><div class="line">	<span class="keyword">if</span>(balls[i].x+radius&gt;<span class="number">0</span>&amp;&amp;balls[i].x-radius&lt;canvasWidth)&#123;</div><div class="line">		<span class="comment">//小球数组中的第0个到cnt-1个是在canvas画布中</span></div><div class="line">		balls[cnt++]=balls[i];</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//删除前面的数组使用balls.shift()</span></div><div class="line"><span class="keyword">while</span>(balls.length&gt;cnt)&#123;</div><div class="line">	balls.pop();<span class="comment">//删除第cnt个到balls.length-1个数组</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>arr[i++]</code>是什么呢？于是开始一步一步地探索</p>
+<h3 id="i-和-i"><a href="#i-和-i" class="headerlink" title="i++和++i"></a>i++和++i</h3><p>大一的时候上java课，老师讲过了这样的题，想必学过计算机相关的都知道&nbsp; &nbsp; (/▽╲)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a=<span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> b=<span class="number">2</span>;</div><div class="line">a=b++;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"a的值是："</span>+a+<span class="string">"，"</span>+<span class="string">"b的值是："</span>+b);</div><div class="line"><span class="comment">//"a的值是：2，b的值是：3"</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> c=<span class="number">1</span>;</div><div class="line"><span class="keyword">var</span> d=<span class="number">2</span>;</div><div class="line">c=++d;</div><div class="line"><span class="built_in">console</span>.log(<span class="string">"c的值是："</span>+c+<span class="string">"，"</span>+<span class="string">"d的值是："</span>+d);</div><div class="line"><span class="comment">//"c的值是：3，d的值是：3"</span></div></pre></td></tr></table></figure>
+<p><code>a=b++</code>是b先把值赋给a，自身再加1；<code>a=++b</code>是b先自身加1，再把值赋给a</p>
+<h3 id="i-和-i-nbsp-在循环中的区别"><a href="#i-和-i-nbsp-在循环中的区别" class="headerlink" title="i++和++i&nbsp; 在循环中的区别"></a>i++和++i&nbsp; 在循环中的区别</h3><ul>
+<li><code>i++</code>在循环中的输出：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">  <span class="built_in">console</span>.log(i++);</div><div class="line">  <span class="comment">//依次输出0,2,4</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>++i</code>在循环中的输出：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">  <span class="built_in">console</span>.log(++i);</div><div class="line">  <span class="comment">//依次输出1,3,5</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="arr-i-和arr-i-在循环中的区别"><a href="#arr-i-和arr-i-在循环中的区别" class="headerlink" title="arr[i++]和arr[++i]在循环中的区别"></a>arr[i++]和arr[++i]在循环中的区别</h3><ul>
+<li><code>arr[i++]</code>在循环中的输出：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">   <span class="built_in">console</span>.log(arr[i++]);</div><div class="line">  <span class="comment">//依次输出11,13,15</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><code>arr[++i]</code>在循环中的输出：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">15</span>,<span class="number">16</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">   <span class="built_in">console</span>.log(arr[++i]);</div><div class="line">  <span class="comment">//依次输出12,14,16</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果数组是奇数个，那么输出<code>arr[++i]</code>的最后一个数会是一个undefined </p>
+<h3 id="arr-i-1和arr-i-1在循环中的区别"><a href="#arr-i-1和arr-i-1在循环中的区别" class="headerlink" title="arr[i++]+=1和arr[++i]+=1在循环中的区别"></a>arr[i++]+=1和arr[++i]+=1在循环中的区别</h3><ul>
+<li><code>arr[i++]+=1</code>在循环中的输出：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">    arr[i++]+=<span class="number">1</span>;</div><div class="line">&#125; </div><div class="line"><span class="built_in">console</span>.log(arr);</div><div class="line"><span class="comment">//输出[2,2,4]</span></div></pre></td></tr></table></figure>
+<ul>
+<li><code>arr[++i]+=1</code>在循环中的输出：</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">    arr[++i]+=<span class="number">1</span>;</div><div class="line">&#125; </div><div class="line"><span class="built_in">console</span>.log(arr);</div><div class="line"><span class="comment">//输出[1,3,3,NaN]</span></div></pre></td></tr></table></figure>
+<p>由于数组是奇数个，所以最后<code>arr[++i]+=1</code>最后的输出结果是NaN，可以通过以下的代码验证</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="literal">undefined</span>+<span class="number">1</span>);</div><div class="line"><span class="comment">//输出NaN</span></div></pre></td></tr></table></figure>
+<h3 id="arr-i-的使用"><a href="#arr-i-的使用" class="headerlink" title="arr[i++]的使用"></a>arr[i++]的使用</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr=[</div><div class="line">	&#123;<span class="attr">x</span>: <span class="number">1</span>&#125;,</div><div class="line">	&#123;<span class="attr">x</span>: <span class="number">5</span>&#125;,</div><div class="line">	&#123;<span class="attr">x</span>: <span class="number">9</span>&#125;,</div><div class="line">	&#123;<span class="attr">x</span>: <span class="number">3</span>&#125;,</div><div class="line">	&#123;<span class="attr">x</span>: <span class="number">10</span>&#125;,</div><div class="line">	&#123;<span class="attr">x</span>: <span class="number">6</span>&#125;</div><div class="line">]</div><div class="line"><span class="keyword">var</span> cnt=<span class="number">0</span>;</div><div class="line"></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;arr.length;i++)&#123;</div><div class="line">  <span class="keyword">if</span>(arr[i].x&lt;<span class="number">4</span>)&#123;</div><div class="line">    arr[cnt++]=arr[i]; </div><div class="line">    <span class="built_in">console</span>.log(<span class="string">'cnt的值是'</span>+cnt+<span class="string">'，i的值是'</span>+i);</div><div class="line"></div><div class="line">    <span class="comment">//"cnt的值是1，i的值是0"</span></div><div class="line">    <span class="comment">//"cnt的值是2，i的值是3"</span></div><div class="line">  &#125;	</div><div class="line">&#125; </div><div class="line"><span class="keyword">while</span>(arr.length&gt;cnt)&#123;</div><div class="line">  arr.pop();</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(arr);</div><div class="line"></div><div class="line"><span class="comment">//   [</span></div><div class="line"><span class="comment">//     [object Object] &#123;x: 1&#125;, </span></div><div class="line"><span class="comment">//     [object Object] &#123;x: 3&#125;</span></div><div class="line"><span class="comment">//   ]</span></div></pre></td></tr></table></figure>
+<p>这说明了<strong>第0到cnt-1个留在arr中，cnt到arr.length-1的数组删除</strong>，使用这个技巧就可以来去除不符合判断语句的数组了</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;总结包含以下内容：&lt;code&gt;i++&lt;/code&gt;和&lt;code&gt;++i&lt;/code&gt;&amp;nbsp; 的区别，&lt;code&gt;i++&lt;/code&gt;和&lt;code&gt;++i&lt;/code&gt;&amp;nbsp; 在循环中的区别，&lt;code&gt;arr[i++]&lt;/code&gt;和&lt;code&gt;arr[++i]&lt;/code&gt;&amp;nbsp; 在循环中的区别，&lt;code&gt;arr[i++]+=1&lt;/code&gt;和&lt;code&gt;arr[++i]+=1&lt;/code&gt;&amp;nbsp; 在循环中的区别，&lt;code&gt;arr[i++]&lt;/code&gt;的使用&lt;/p&gt;
+&lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                    &lt;img src=&quot;/img/Array-arr++.png&quot; alt=&quot;Array-arr++&quot; title=&quot;&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;image-caption&quot;&gt;Array-arr++&lt;/div&gt;
+            &lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="JS" scheme="http://icke.site/tags/JS/"/>
+    
+      <category term="数组" scheme="http://icke.site/tags/%E6%95%B0%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Canvas绚丽倒计时学习笔记</title>
+    <link href="http://icke.site/2017/03/09/20170309-Canvas-Countdown/"/>
+    <id>http://icke.site/2017/03/09/20170309-Canvas-Countdown/</id>
+    <published>2017-03-09T05:14:50.000Z</published>
+    <updated>2017-07-03T03:24:12.867Z</updated>
+    
+    <content type="html"><![CDATA[<p>总结包含以下内容：创建画布，绘制直线，绘制弧线，绘制静止的时钟，设置倒计时效果，让倒计时动起来，小球的运动，及时清空Canvas画布外面的小球，将倒计时的效果换成正常时钟效果</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/Canvas-Clock.png" alt="Canvas-Clock" title="">
+                </div>
+                <div class="image-caption">Canvas-Clock</div>
+            </figure>
+<a id="more"></a>
+<p>关于Canvas：HTML5 &lt;canvas&gt; 标签用于绘制图像（通过脚本，通常是 JavaScript）。<br>不过，&lt;canvas&gt;元素本身并没有绘制能力（它仅仅是图形的容器），必须使用脚本来完成实际的绘图任务。&nbsp;&nbsp;<em>[该叙述来自<a href="http://www.w3school.com.cn/tags/html_ref_canvas.asp" target="_blank" rel="external">W3CSCHOOL</a>]</em><br>演示： <a href="http://codepen.io/ickedesign/pen/peRvwO" target="_blank" rel="external">Gorgeous Countdown</a></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/GorgeousCountdown-Sketch.png" alt="GorgeousCountdown-Sketch" title="">
+                </div>
+                <div class="image-caption">GorgeousCountdown-Sketch</div>
+            </figure>
+<h3 id="Creat-Canvas"><a href="#Creat-Canvas" class="headerlink" title="Creat Canvas"></a>Creat Canvas</h3><blockquote>
+<p>创建画布</p>
+</blockquote>
+<ul>
+<li>canvas是行内元素，有默认的高宽（300px*150px）</li>
+<li><code>display: block</code>可以把<code>&lt;canvas&gt;&lt;/canvas&gt;</code>变成块级元素,从而可以通过<code>margin: 0 auto;</code>设置为水平居中      </li>
+<li><p>canvas有显示的大小，还有内里分辨率的大小，所以不能在css中设置canvas的宽高。可以使用以下两种方法设置</p>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--直接在标签头设置--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">canvas</span> <span class="attr">width</span>=<span class="string">"1024"</span> <span class="attr">height</span>=<span class="string">"500"</span>&gt;</span><span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></div></pre></td></tr></table></figure>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//在js中设置</span></div><div class="line"><span class="keyword">var</span> canvas=<span class="built_in">document</span>.getElementById(<span class="string">'canvas'</span>);</div><div class="line">canvas.width=<span class="string">"1024"</span>;</div><div class="line">canvas.height=<span class="string">"500"</span>;</div></pre></td></tr></table></figure>
+</li>
+<li><p>&lt;canvas&gt;是HTML5的新标签，所以存在兼容问题。<br>注意：若把判断条件改成<code>canvas.getContext(&quot;2d&quot;)</code>会出错</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(canvas.getContext)&#123;</div><div class="line">	<span class="keyword">var</span> context=canvas.getContext(<span class="string">'2d'</span>); </div><div class="line">&#125;</div><div class="line"><span class="keyword">else</span>&#123;</div><div class="line">	alert(<span class="string">'当前浏览器不支持canvas，请更换浏览器后再试'</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h3 id="Draw-Line"><a href="#Draw-Line" class="headerlink" title="Draw Line"></a>Draw Line</h3><blockquote>
+<p>绘制直线</p>
+</blockquote>
+<p><strong>备注</strong>：以下的<code>context</code>，默认由<code>var context=canvas.getContext(&quot;2d&quot;)</code>取得</p>
+<ul>
+<li><p><code>context.closePath()</code>的存在会让未闭合的线条自动闭合，所以用不用看情况。总之，一个Canvas画布如果没有使用<code>context.beginPath()</code>，那么画布上的其它图形会受到影响<br></p>
+</li>
+<li><p><code>context.moveTo(x1,y1)</code>用来定义画笔的起始位置<br><code>context.lineTo(x2,y2)</code>用来定义画笔的终止位置</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//画一个闭合图形</span></div><div class="line">context.beginPath();</div><div class="line">context.moveTo(x1,y1);</div><div class="line">context.lineTo(x2,y2);</div><div class="line">context.lineTo(x1,y2);</div><div class="line">context.moveTo(x1,y1);</div><div class="line">context.closePath();</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>context.lineWidth=num</code>定义画笔大小<br><code>context.strokeStyle=&quot;color&quot;</code>定义画笔颜色<br><code>context.stroke()</code> 执行绘图的方法<br><code>context.fillStyle=&quot;color&quot;</code>定义填充的颜色<br><code>context.fill()</code> 执行着色的方法</p>
+</li>
+</ul>
+<p>使用以上方法，即可绘制一个七巧板：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/Canvas-Tangram.png" alt="Canvas Tangram" title="">
+                </div>
+                <div class="image-caption">Canvas Tangram</div>
+            </figure></p>
+<hr>
+<h3 id="Draw-Arc"><a href="#Draw-Arc" class="headerlink" title="Draw Arc"></a>Draw Arc</h3><blockquote>
+<p>绘制弧线</p>
+</blockquote>
+<ul>
+<li><p><code>context.arc(300,300,0,1.5*Math.PI,false)</code> 的含义是沿顺时针的方向来绘制一个圆心为（300，300），角度为1.5π</p>
+  <figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">context.arc(centerx,centery,radius,startingAngle,endingAngle,anticlockwise=<span class="literal">false</span>);</div><div class="line"><span class="comment">//默认clockwise=false，即在逆时针的方向上以角度为 0,0.5*PI,1*PI,1.5*PI,2*PI这种形式绘图</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h3 id="Draw-Digit"><a href="#Draw-Digit" class="headerlink" title="Draw Digit"></a>Draw Digit</h3><blockquote>
+<p>绘制静止的时钟</p>
+</blockquote>
+<ul>
+<li><p>先编写一个三维数组，来显示数字和冒号。这里以0和：来举例</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//数字有7列10行组成，冒号由4列10行组成，数组中有1的地方就是代表有小球</span></div><div class="line">digit =</div><div class="line">    [</div><div class="line">        [</div><div class="line">            [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>],</div><div class="line">            [<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>],</div><div class="line">            [<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>],</div><div class="line">            [<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>],</div><div class="line">            [<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>],</div><div class="line">            [<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>],</div><div class="line">            [<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>],</div><div class="line">            [<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>],</div><div class="line">            [<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>],</div><div class="line">            [<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>]</div><div class="line">        ],<span class="comment">//0</span></div><div class="line">        [</div><div class="line">            [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</div><div class="line">            [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</div><div class="line">            [<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>],</div><div class="line">            [<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>],</div><div class="line">            [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</div><div class="line">            [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</div><div class="line">            [<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>],</div><div class="line">            [<span class="number">0</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>],</div><div class="line">            [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>],</div><div class="line">            [<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>]</div><div class="line">        ]<span class="comment">//:</span></div><div class="line">    ];</div></pre></td></tr></table></figure>
+</li>
+<li><p>通过循环数组，定义好小球之间的距离，即可画出小球。不过说得容易，逻辑对我们这些初学者有点复杂。感兴趣可以看下我github上的文件：<em><a href="https://github.com/ickedesign/Canvas_Training/blob/master/001-Canvas%E7%BB%9A%E4%B8%BD%E7%9A%84%E5%80%92%E8%AE%A1%E6%97%B6%E6%95%88%E6%9E%9C/js/05.drawDigit.js" target="_blank" rel="external">drawDigit.js</a></em></p>
+</li>
+</ul>
+<hr>
+<h3 id="Countdown-Effect"><a href="#Countdown-Effect" class="headerlink" title="Countdown Effect"></a>Countdown Effect</h3><blockquote>
+<p>设置倒计时效果</p>
+</blockquote>
+<ul>
+<li>获取倒计时的时间使用设置好的时间减去现在的时间，这个设置好的时间可以使用<code>new Date()</code>生成，比如<code>const endTime=new Date(2017,2,7,20,14,12)</code>。其中月份是从0开始的，所以这个时间的含义是2017-03-07，20：14：12</li>
+<li><p>也可以使用以下的方法来设置固定的时间，比如倒计时时间固定从1小时开始</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> endTime=<span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">endTime.setTime(endTime.getTime()+<span class="number">3600</span>*<span class="number">1000</span>);</div></pre></td></tr></table></figure>
+</li>
+<li><p>注意分清var、const和let三个定义变量的区别：</p>
+<ul>
+<li>var定义的变量可以修改，如果不初始化会输出undefined，不会报错</li>
+<li>const定义的变量不可以修改，而且必须初始化</li>
+<li>let是块级作用域，函数内部使用let定义后，对函数外部无影响</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="Moving-Clock"><a href="#Moving-Clock" class="headerlink" title="Moving Clock"></a>Moving Clock</h3><blockquote>
+<p>让倒计时动起来</p>
+</blockquote>
+<ul>
+<li>使用setInterval()方法更新，从而数字可以变化而更新生成新的小球的位置<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//添加时钟的动画效果</span></div><div class="line">setInterval(</div><div class="line">	<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		render(context);<span class="comment">//初始化时间</span></div><div class="line">		update();<span class="comment">//对时间进行更新</span></div><div class="line">	&#125;,</div><div class="line">	<span class="number">50</span> <span class="comment">//一秒有1000毫秒，即20分之1，</span></div><div class="line">	<span class="comment">//所以帧率为20，即动画1秒钟更新20次。但事实上，因为里面的函数执行效率不同，所以帧数不一定为20</span></div><div class="line">)</div><div class="line"><span class="string">``</span><span class="string">`	</span></div><div class="line"></div><div class="line">* `context.clearRect(x,y,canvasWidth,canvasHeight);<span class="string">`其中x,y指的是清除矩形画布的左上角位置，canvasWidth,canvasHeight指的是清除矩形画布的宽度和长度。使用该函数可以让canvas中后来生成的图形不会和原来的图形叠加在一起了，相反效果的是`</span>context.fillRect()<span class="string">`，其作用是填充矩形，参数类似</span></div><div class="line">`<span class="string">``</span>js</div><div class="line">context.clearRect(<span class="number">0</span>,<span class="number">0</span>,context.canvas.width,context.canvas.height);</div><div class="line"><span class="comment">//从右上角开始，范围是整个画布</span></div><div class="line"><span class="comment">//使用context.canvas.width来获取canvas的宽度是context的属性之一</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h3 id="Ball-Motion"><a href="#Ball-Motion" class="headerlink" title="Ball Motion"></a>Ball Motion</h3><blockquote>
+<p>小球的运动</p>
+</blockquote>
+<ul>
+<li>小球的运动很有趣，和高中物理课上的抛物线一样，有初始速度，重力加速度，摩擦系数</li>
+<li>小球的运动也需要借助setInterval()方法来更新，类似时钟的动画效果</li>
+<li>小球触底后反弹使用<code>if</code>语句来判断<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//当小球触底后会反弹</span></div><div class="line"><span class="keyword">if</span>(canvasHeight-ball.y&lt;=ball.r)&#123;</div><div class="line">	ball.y=canvasHeight-ball.r;</div><div class="line">	ball.vy=-ball.vy*<span class="number">0.5</span>;<span class="comment">//添加阻力系数</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h3 id="Performance-Optimization"><a href="#Performance-Optimization" class="headerlink" title="Performance Optimization"></a>Performance Optimization</h3><blockquote>
+<p>及时清空Canvas画布外面的小球</p>
+</blockquote>
+<ul>
+<li>核心是<code>balls[cnt++]=balls[i]</code>这个表达式，我一开始也是有点懵逼。后来做了下试验就明白了<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//及时清空跳出画布的小球，优化页面的内存</span></div><div class="line"><span class="keyword">var</span> cnt=<span class="number">0</span></div><div class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>;i&lt;balls.length;i++)&#123;</div><div class="line">	<span class="keyword">if</span>(balls[i].x+radius&gt;<span class="number">0</span>&amp;&amp;balls[i].x-radius&lt;canvasWidth)&#123;</div><div class="line">		<span class="comment">//小球数组中的第0个到cnt-1个是在canvas画布中</span></div><div class="line">		balls[cnt++]=balls[i];</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//Math.min();两个数取最小值</span></div><div class="line"><span class="keyword">while</span>(balls.length&gt;<span class="built_in">Math</span>.min(<span class="number">250</span>,cnt))&#123;</div><div class="line">	balls.pop();<span class="comment">//删除第cnt个到balls.length-1个数组</span></div><div class="line">	<span class="comment">//删除前面的数组使用balls.shift();</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<hr>
+<h3 id="Clock-Effect"><a href="#Clock-Effect" class="headerlink" title="Clock Effect"></a>Clock Effect</h3><blockquote>
+<p>将倒计时的效果换成正常时钟效果</p>
+</blockquote>
+<ul>
+<li>比较简单<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ret=currentTime.getHours()*<span class="number">3600</span>+currentTime.getMinutes()*<span class="number">60</span>+currentTime.getSeconds();</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="http://www.w3school.com.cn/tags/html_ref_canvas.asp" target="_blank" rel="external">HTML 5 Canvas 参考手册</a>)</li>
+<li><a href="http://www.imooc.com/learn/133" target="_blank" rel="external">炫丽的倒计时效果Canvas绘图与动画基础</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;总结包含以下内容：创建画布，绘制直线，绘制弧线，绘制静止的时钟，设置倒计时效果，让倒计时动起来，小球的运动，及时清空Canvas画布外面的小球，将倒计时的效果换成正常时钟效果&lt;/p&gt;
+&lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                    &lt;img src=&quot;/img/Canvas-Clock.png&quot; alt=&quot;Canvas-Clock&quot; title=&quot;&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;image-caption&quot;&gt;Canvas-Clock&lt;/div&gt;
+            &lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="HTML5" scheme="http://icke.site/tags/HTML5/"/>
+    
+      <category term="Canvas" scheme="http://icke.site/tags/Canvas/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript正则表达式基础归纳</title>
+    <link href="http://icke.site/2017/03/05/20170305-JavaScript-RegExp/"/>
+    <id>http://icke.site/2017/03/05/20170305-JavaScript-RegExp/</id>
+    <published>2017-03-05T06:02:37.000Z</published>
+    <updated>2017-07-03T03:19:39.913Z</updated>
+    
+    <content type="html"><![CDATA[<p>归纳包含以下内容： 正则表达式简介、工具使用、RegExp对象、元字符、字符类、范围类、JS预定义类、量词、JS正则的贪婪模式和非贪婪模式、分组、前瞻、JS对象属性、test和exec方法、字符串对象方法</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/JS-RegExp.png" alt="JS-RegExp" title="">
+                </div>
+                <div class="image-caption">JS-RegExp</div>
+            </figure>
+<a id="more"></a>
+<h3 id="正则表达式简介"><a href="#正则表达式简介" class="headerlink" title="正则表达式简介"></a>正则表达式简介</h3><p>Regular Expression，即正则表达式。使用单个字符串来描述、匹配一系列符合某个句法规则的字符串。</p>
+<hr>
+<h3 id="工具使用"><a href="#工具使用" class="headerlink" title="工具使用"></a>工具使用</h3><p>在线显示正则表达式的图形工具: &nbsp; <a href="http://regexper.com" target="_blank" rel="external">regexper官网</a></p>
+<p>以下为Sublime使用的三种演示：</p>
+<p>首先，在sublime中，使用快捷键ctrl+h打开replace窗口，再点击“*”，这样就可以在Sublime的输入框中输入正则表达式来查找字段</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170121011345132?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSWNrZU1veWVy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="在sublime中，使用快捷键ctrl+h打开replace窗口，再点击“*”，这样可以在输入框中输入正则表达式来查找" title="">
+                </div>
+                <div class="image-caption">在sublime中，使用快捷键ctrl+h打开replace窗口，再点击“*”，这样可以在输入框中输入正则表达式来查找</div>
+            </figure>
+<ul>
+<li><strong>将is这个单词替换成IS</strong></li>
+</ul>
+<p>待处理字段：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">//将is这个单词替换成IS</div><div class="line">this is a boy</div></pre></td></tr></table></figure></p>
+<p>在输入框中输入：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170121175619196" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure></p>
+<p>正则表达式图形表示：<br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170121175856903" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure></p>
+<p>成功处理字段：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//test.txt</div><div class="line">//将is这个单词替换成IS</div><div class="line">this IS a boy</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>去掉含有jpg后缀的http地址中的http://</strong></li>
+</ul>
+<p>待处理字段：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//去掉含有jpg后缀的http地址中的http://</div><div class="line">http://www.baidu.com/abc.jpg</div><div class="line">http://www.baidu.com/abc.png</div><div class="line">https://www.baidu.com/abc.jpg</div></pre></td></tr></table></figure>
+<p>在输入框中输入：<br> <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170121181519048" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure></p>
+<p>正则表达式图形表示：<br> <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170121181606726" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure></p>
+<blockquote>
+<p><strong>备注</strong>：<br>注意符号/要使用\来转义，即\/<br>. 表示any character，任意字符<br>+表示不限量<br>()内是第一个分组</p>
+</blockquote>
+<p>成功处理字段：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//去掉含有jpg后缀的http地址中的http://</div><div class="line">www.baidu.com/abc.jpg</div><div class="line">http://www.baidu.com/abc.png</div><div class="line">https://www.baidu.com/abc.jpg</div></pre></td></tr></table></figure>
+<ul>
+<li><strong>日期替换，将日期格式如2013-01-13替换成01-13-2013</strong></li>
+</ul>
+<p>待处理字段：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//日期替换，将日期格式如2013-01-13替换成01-13-2013</div><div class="line">2014-11-12</div><div class="line">2015/04/06</div><div class="line">23771/34/22</div></pre></td></tr></table></figure></p>
+<p>在输入框中输入：<br> <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170121202531898" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure></p>
+<p>正则表达式图形表示：<br> <figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170121202610982" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure></p>
+<p>成功处理字段：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//日期替换，将日期格式如2013-01-13替换成01-13-2013</div><div class="line">11-2014-12</div><div class="line">04-2015-06</div><div class="line">23771/34/22</div></pre></td></tr></table></figure>
+<h3 id="RegExp对象"><a href="#RegExp对象" class="headerlink" title="RegExp对象"></a>RegExp对象</h3><p>有两种方法实例化RegExp对象，即<strong>字面量</strong>和<strong>构造函数</strong>。</p>
+<ul>
+<li><strong>字面量</strong></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var reg=/\bis\b/g;</div><div class="line">'He is a boy.This is a dog'.replace(reg,'IS');</div></pre></td></tr></table></figure>
+<p> <img src="http://img.blog.csdn.net/20170121203846344" alt="这里写图片描述"></p>
+<ul>
+<li><strong>构造函数</strong></li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var reg=new RegExp('\\bis\\b','g');</div><div class="line">'He is a boy.This is a dog'.replace(reg,'IS');</div></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>备注</strong>： \要转义</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170121204101330" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>
+<h3 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h3><p>正则表达式由两种基本字符类型组成：</p>
+<ul>
+<li>原意文本字符</li>
+<li><strong>元字符</strong></li>
+</ul>
+<p>元字符是在正则表达式中有特殊含义的非字母字符：<strong>*+?$^.|(){}[]</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字符</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">\t</td>
+<td style="text-align:center">水平制表符</td>
+</tr>
+<tr>
+<td style="text-align:center">\v</td>
+<td style="text-align:center">垂直制表符</td>
+</tr>
+<tr>
+<td style="text-align:center">\n</td>
+<td style="text-align:center">换行符</td>
+</tr>
+<tr>
+<td style="text-align:center">\r</td>
+<td style="text-align:center">回车符</td>
+</tr>
+<tr>
+<td style="text-align:center">\0</td>
+<td style="text-align:center">空字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\f</td>
+<td style="text-align:center">换页符</td>
+</tr>
+<tr>
+<td style="text-align:center">\cX</td>
+<td style="text-align:center">与X对应的控制字符（Ctrl+X）</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="字符类"><a href="#字符类" class="headerlink" title="字符类"></a>字符类</h3><ul>
+<li><strong>一般情况下正则表达式一个字符对应字符串一个字符</strong><br>例如：表达式ab\t的含义是<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170123000332510" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure></li>
+<li><strong>我们可以使用元字符[]来构建一个简单的类</strong><br>所谓类是指符合某些特性的对象，一个泛指，而不是特指某个字符<br>表达式[abc]，即把字符a或b或c归为一类，表达式可以匹配这类的字符<br>字符类取反：[^abc]<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170123001552671" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>
+</li>
+</ul>
+<hr>
+<h3 id="范围类"><a href="#范围类" class="headerlink" title="范围类"></a>范围类</h3><ul>
+<li>[a-z]，闭区间</li>
+<li>[a-zA-Z]，可连写<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170124153110855" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>
+</li>
+</ul>
+<hr>
+<h3 id="JS预定义类"><a href="#JS预定义类" class="headerlink" title="JS预定义类"></a>JS预定义类</h3><ul>
+<li><strong>预定类</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字符</th>
+<th style="text-align:center">等价类</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">.</td>
+<td style="text-align:center">[^\r\n]</td>
+<td style="text-align:center">除了回车符和换行符之外的所有字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\d</td>
+<td style="text-align:center">[0-9]</td>
+<td style="text-align:center">数字字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\D</td>
+<td style="text-align:center">[^0-9]</td>
+<td style="text-align:center">非数字字符</td>
+</tr>
+<tr>
+<td style="text-align:center">\s</td>
+<td style="text-align:center">[\t\v\f\r\n]</td>
+<td style="text-align:center">空白符</td>
+</tr>
+<tr>
+<td style="text-align:center">\S</td>
+<td style="text-align:center">[^\t\v\f\r\n]</td>
+<td style="text-align:center">非空白符</td>
+</tr>
+<tr>
+<td style="text-align:center">\w</td>
+<td style="text-align:center">[a-zA-Z_0-9]</td>
+<td style="text-align:center">单词字符（字母、数字下划线）</td>
+</tr>
+<tr>
+<td style="text-align:center">\W</td>
+<td style="text-align:center">[^a-zA-Z_0-9]</td>
+<td style="text-align:center">非单词字符</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>备注</strong>：空白符为[ \t\n\x0B\f\r]，空字符为\0，\0代表查找NULL字符<br><strong>验证</strong>：</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170125145955661" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>
+<ul>
+<li><strong>边界</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">字符</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">^</td>
+<td style="text-align:center">以xxx开始</td>
+</tr>
+<tr>
+<td style="text-align:center">$</td>
+<td style="text-align:center">以xxx结束</td>
+</tr>
+<tr>
+<td style="text-align:center">\b</td>
+<td style="text-align:center">单词边界</td>
+</tr>
+<tr>
+<td style="text-align:center">\B</td>
+<td style="text-align:center">非单词边界</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>举例</strong>：</p>
+</blockquote>
+<ul>
+<li><p>\b，\B的使用</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170124154608939" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>
+</li>
+<li><p>^$的使用</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170124155138161" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>
+</li>
+<li><p>多行匹配，/m影响的是^$的分割方式 </p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170124160042102" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>
+</li>
+</ul>
+<hr>
+<h3 id="量词"><a href="#量词" class="headerlink" title="量词"></a>量词</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">字符</th>
+<th style="text-align:center">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">?</td>
+<td style="text-align:center">0次或1次（最多一次）</td>
+</tr>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">1次或1次以上（至少一次）</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">0次或多次 (任意次)</td>
+</tr>
+<tr>
+<td style="text-align:center">{n}</td>
+<td style="text-align:center">出现n次</td>
+</tr>
+<tr>
+<td style="text-align:center">{n,m}</td>
+<td style="text-align:center">出现n次到m次</td>
+</tr>
+<tr>
+<td style="text-align:center">{n,}</td>
+<td style="text-align:center">至少出现为n次</td>
+</tr>
+<tr>
+<td style="text-align:center">{0,m}</td>
+<td style="text-align:center">最多出现m次</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>举例</strong>：</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">\d?\d+\d*\d&#123;<span class="number">6</span>&#125;\d&#123;<span class="number">3</span>,<span class="number">6</span>&#125;\d&#123;<span class="number">3</span>,&#125;\d&#123;<span class="number">0</span>,<span class="number">6</span>&#125;</div></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170124162327178" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>
+<hr>
+<h3 id="JS正则的贪婪模式和非贪婪模式"><a href="#JS正则的贪婪模式和非贪婪模式" class="headerlink" title="JS正则的贪婪模式和非贪婪模式"></a>JS正则的贪婪模式和非贪婪模式</h3><ul>
+<li><strong>贪婪模式</strong><br>量词为{n,m}时，正则表达式尽可能多得往m匹配</li>
+<li><strong>非贪婪模式</strong><br>在量词{n,m}后面加上?</li>
+</ul>
+<blockquote>
+<p><strong>举例</strong>：</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170124163038101" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>
+<hr>
+<h3 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h3><ul>
+<li><strong>分组</strong><br>使用()来实现分组：<br>Byron{3}指的是n出现3次；<br>(Byron){3}指的是Byron出现3次</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Byron&#123;<span class="number">3</span>&#125;(Byron)&#123;<span class="number">3</span>&#125;/</div></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170124165026606" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>    
+<ul>
+<li><strong>或</strong><br>使用|来实现或<br>Byron|Casper和Byr(on|Ca)sper</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/Byron|Casper(Byr(on|Ca)sper)/</div></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170124165255359" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>
+<ul>
+<li><strong>反向引用</strong><br>使用$符：将2016-07-13转换为07/13/2016</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">'2014/02/23'</span>.replace(<span class="regexp">/(\d&#123;4&#125;)\/(\d&#123;2&#125;)\/(\d&#123;2&#125;)/g</span>,<span class="string">'$2-$3-$1'</span>);</div></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170124195854900" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>
+<ul>
+<li><strong>忽略分组</strong><br>不希望捕获某些分组。只需要在分组内加上?:</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/(?:Byron).(<span class="number">123</span>)/</div></pre></td></tr></table></figure>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170124171502903" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>
+<h3 id="前瞻"><a href="#前瞻" class="headerlink" title="前瞻"></a>前瞻</h3><ul>
+<li>前瞻就是正则表达式匹配到规则的时候，向前检查是否符合断言。“前”指的是从文本头部到文本尾部的方向</li>
+<li>后顾和前瞻方向相反，javascript中不支持</li>
+<li>符合断言称为正向匹配或肯定匹配；不符合断言称为负向匹配或否定匹配</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">正则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">正向前瞻</td>
+<td style="text-align:center">exp(?=assert)</td>
+</tr>
+<tr>
+<td style="text-align:center">负向前瞻</td>
+<td style="text-align:center">exp(?!assert)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>举例</strong>：</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170124214751418" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>
+<h3 id="JS对象属性"><a href="#JS对象属性" class="headerlink" title="JS对象属性"></a>JS对象属性</h3><ul>
+<li><strong>global</strong> ：全局匹配，默认值为false</li>
+<li><strong>ignoreCase</strong> ：忽略大小写，默认值为false</li>
+<li><strong>multiline</strong> ：多行匹配，默认值为false</li>
+<li><strong>lastIndex</strong> ：当前表达式匹配内容的最后一个字符的下一个位置</li>
+<li><p><strong>source</strong> ：正则表达式的文本字符串 </p>
+<blockquote>
+<p><strong>备注</strong>：global、ignore case、multiline为只读<br>  <strong>举例</strong>：</p>
+</blockquote>
+</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170124222653164" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>
+<hr>
+<h3 id="test和exec方法"><a href="#test和exec方法" class="headerlink" title="test和exec方法"></a>test和exec方法</h3><ul>
+<li><p><strong>test()</strong><br><code>RegExp.prototype.test(str)</code></p>
+<ul>
+<li>用于测试字符串参数中是否存在匹配正则表达式模式的字符串。可以发现，在全局调用下，即对于reg2，在第三次test匹配时出现了false，这是因为在全局调用下lastIndex不为0。<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170125152324662" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure></li>
+<li>每次都实例化reg2可以使test匹配时不出现false,但这花费内存开销。所以当我们想用到test本义时，不用加上/g来进行全局匹配<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170125152751892" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>
+</li>
+</ul>
+</li>
+<li><p><strong>exec()</strong></p>
+<p><code>RegExp.prototype.exec(str)</code></p>
+<ul>
+<li>使用正则表达式模式对字符串执行搜索，并将更新全局RegExp对象的属性以反映匹配结果</li>
+<li><p>如果没有匹配的文本则返回null，否则返回一个结果数组：</p>
+<ul>
+<li>index 声明匹配文本的第一个字符位置</li>
+<li>input 存放被检索的字符串string</li>
+</ul>
+</li>
+<li><p>两种调用方式：</p>
+<ol>
+<li><strong>非全局调用</strong><ul>
+<li>调用非全局的RegExp对象的exec()时，返回数组</li>
+<li>第一个元素是与正则表达式相匹配的文本</li>
+<li>第二个元素是与RegExpObject的第一个子表达式相匹配的文本（如果有的话）</li>
+<li>第三个元素是与RegExpObject的第二个子表达式相匹配的文本（如果有的话），以此类推</li>
+<li>在非全局调用下，lastIndex不生效，会被正则忽略，默认为0<br><img src="http://img.blog.csdn.net/20170125161718514" alt="这里写图片描述"></li>
+</ul>
+</li>
+<li><strong>全局调用</strong><ul>
+<li>非全局调用类似，不同的是lastIndex生效<br><img src="http://img.blog.csdn.net/20170125163106517" alt="这里写图片描述"></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="字符串对象方法"><a href="#字符串对象方法" class="headerlink" title="字符串对象方法"></a>字符串对象方法</h3><ul>
+<li><p><strong>search()</strong><br><code>String.prototype.search(reg)</code></p>
+<ul>
+<li>search()方法用于检索字符串中指定的子字符串，或检索与正则表达式相匹配的子字符串</li>
+<li>方法返回第一个匹配结果的index，查找不到返回-1；</li>
+<li>search()方法不执行全局匹配，它将忽略/g，并且总是从字符串的开始进行检索</li>
+</ul>
+<p><img src="http://img.blog.csdn.net/20170125173842533" alt="这里写图片描述"></p>
+<blockquote>
+<p><strong>备注</strong>：对于字符串或数字，search()方法会尝试转化为正则表达式</p>
+</blockquote>
+</li>
+<li><p><strong>match()</strong><br><code>String.prototype.match(reg)</code></p>
+<ul>
+<li>match()方法将检索字符串，以找到一个或多个与regexp匹配的文本</li>
+<li>regexp是否具有标志g对结果影响很大</li>
+<li><p>两种调用方式</p>
+<ol>
+<li><p><strong>非全局调用</strong></p>
+<ul>
+<li>如果regexp没有标志g，那么match()方法就只能在字符串中执行一次匹配：<br>(1) 如果没有找到任何匹配的文本，将返回null；<br>(2) 否则它将返回一个数组，其中存放了与它找到的匹配文本有关的信息</li>
+<li>返回数组的第一个元素存放的是匹配文本，而其余的元素存放的是与正则表达式的子表达式匹配的文本</li>
+<li><p>除了常规的数组元素之外，返回的数组还含有2个对象属性：<br>(1) index声明匹配文本的起始字符在字符串的位置；<br>(2) input声明对stringObject的引用</p>
+<p><img src="http://img.blog.csdn.net/20170125180054535" alt="这里写图片描述"></p>
+<blockquote>
+<p><strong>备注</strong>：与exec()的非全局调用方法类似，只是match()方法是<code>String.prototype.match(reg)</code>，exec()方法是<code>RegExp.prototype.match(str)</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>全局调用</strong></p>
+<ul>
+<li>如果regexp具有标志g，则match()方法将执行全局检索，找到字符串中的所有匹配子字符串：<br>(1) 没有找到任何匹配的字串，则返回null；<br>(2) 如果找到了一个或多个匹配字串，则返回一个数组</li>
+<li><p>数组元素中存放的是字符串中所有的匹配子串，而且也没有index属性或input属性</p>
+<p><img src="http://img.blog.csdn.net/20170125185209660" alt="这里写图片描述"></p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><strong>split()</strong><br><code>String.prototype.split(reg)</code></p>
+<ul>
+<li>使用字符串或正则表达式来将原字符串分割成字符数组<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="http://img.blog.csdn.net/20170125185936149" alt="这里写图片描述" title="">
+                </div>
+                <div class="image-caption">这里写图片描述</div>
+            </figure>
+<blockquote>
+<p><strong>备注</strong>： split()方法将字符串转换为对应正则表达式</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p><strong>replace()</strong><br><code>String.prototype.replace</code></p>
+<ul>
+<li><code>String.prototype.replace(str,replaceStr)</code></li>
+<li><code>String.prototype.replace(reg,replaceStr)</code></li>
+<li><p><code>String.prototype.replace(reg,function)</code></p>
+<ul>
+<li><p>function会在每次匹配替换的时候调用，有四个参数</p>
+<ol>
+<li>匹配字符串 (match)</li>
+<li>正则表达式分组内容，没有分组则没有改参数 (group1,group2……)</li>
+<li>匹配项在字符串中的index (index)</li>
+<li>原字符串 (origin)</li>
+</ol>
+<p><img src="http://img.blog.csdn.net/20170125200028285" alt="这里写图片描述"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h4><ul>
+<li><a href="http://www.imooc.com/learn/706" target="_blank" rel="external">JavaScript正则表达式</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;归纳包含以下内容： 正则表达式简介、工具使用、RegExp对象、元字符、字符类、范围类、JS预定义类、量词、JS正则的贪婪模式和非贪婪模式、分组、前瞻、JS对象属性、test和exec方法、字符串对象方法&lt;/p&gt;
+&lt;figure class=&quot;image-bubble&quot;&gt;
+                &lt;div class=&quot;img-lightbox&quot;&gt;
+                    &lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;
+                    &lt;img src=&quot;/img/JS-RegExp.png&quot; alt=&quot;JS-RegExp&quot; title=&quot;&quot;&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;image-caption&quot;&gt;JS-RegExp&lt;/div&gt;
+            &lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="JS" scheme="http://icke.site/tags/JS/"/>
+    
+      <category term="正则表达式" scheme="http://icke.site/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   
