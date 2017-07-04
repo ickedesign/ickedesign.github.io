@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://icke.site/"/>
-  <updated>2017-07-03T08:19:13.492Z</updated>
+  <updated>2017-07-04T15:00:20.250Z</updated>
   <id>http://icke.site/</id>
   
   <author>
@@ -14,6 +14,87 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue1.x仿饿了吗的页面骨架和header组件开发</title>
+    <link href="http://icke.site/2017/07/04/20170704-Vue-Vue1xheader/"/>
+    <id>http://icke.site/2017/07/04/20170704-Vue-Vue1xheader/</id>
+    <published>2017-07-04T13:22:00.000Z</published>
+    <updated>2017-07-04T15:00:20.250Z</updated>
+    
+    <content type="html"><![CDATA[<p>总结包含以下内容： 页面骨架和header组件开发，页面布局，移动端的开发知识<br><a id="more"></a><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/Vue1xheader.png" alt="Vue-Vue1xheader" title="">
+                </div>
+                <div class="image-caption">Vue-Vue1xheader</div>
+            </figure></p>
+<hr>
+<h3 id="起始"><a href="#起始" class="headerlink" title="起始"></a>起始</h3><ul>
+<li>Vue-cli，脚手架搭建基本代码框架</li>
+<li>Webpack，构建工具</li>
+<li>Vue-resource，与后端做数据交互</li>
+<li>Vue-router，做前端路由，可实现单页应用</li>
+<li>eslint，ES6代码风格检查工具，用来规范风格</li>
+<li>MVVM框架有React,Vue.js,Angular</li>
+<li>Vue.js是一款轻量级框架，gzip后只有20多KB，适合做移动端项目。借鉴了Angular的指令和React的组件化，核心思想是数据驱动和组件化（封装可重用的代码）</li>
+<li>MVVM：View视图部分（DOM），ViewModel：（通讯，观察者，监听，数据双向绑定），Model：（数据，JavaScript对象）</li>
+<li>组件化，工程化，模块化</li>
+</ul>
+<h3 id="页面骨架搭建"><a href="#页面骨架搭建" class="headerlink" title="页面骨架搭建"></a>页面骨架搭建</h3><ul>
+<li><p>使用Vue-cli作为项目的脚手架，安装<code>webpack#1.0</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">npm install -g vue-cli	<span class="comment">// 全局安装Vue-cli</span></div><div class="line">vue init webpack sell	<span class="comment">//sell是项目名称</span></div><div class="line"><span class="comment">// 在init过程中勾选ESlint，规范ES6编写</span></div><div class="line">cd sell	<span class="comment">// 进入sell文件夹</span></div><div class="line">npm install	<span class="comment">// 安装nodemodule模块</span></div><div class="line">npm run dev	<span class="comment">//运行</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>package.json中dependences是运行依赖，devDependencies是开发依赖</p>
+</li>
+<li>babelrc是用来做编码的预设，<code>&quot;comments&quot;: false</code>表示代码转换后不生成注释</li>
+</ul>
+<h3 id="header组件开发"><a href="#header组件开发" class="headerlink" title="header组件开发"></a>header组件开发</h3><ul>
+<li>项目使用了Mock数据来模拟后台数据</li>
+<li>Vue1.x的标签名对组件名大小写不敏感</li>
+<li>在Vue1.x中，改变路由<code>&lt;router-view&gt;&lt;/router-view&gt;</code>这部分会刷新</li>
+<li>在Vue1.x中使用Vue-router要更换掉<code>new Vue({})</code>这种写法，实例化方法为<code>Vue.extend({})</code></li>
+<li><p>1像素边框：因为手机的DPR(设备像素比)不同，所以1像素的边框在不同手机的像素是不一样的。一种解决是使用<code>@media query</code>，以下为<code>stylus</code>写法：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">@media (-webkit-min-device-pixel-ratio:<span class="number">1.5</span>),(min-device-pixel-ratio:<span class="number">1.5</span>)</div><div class="line">	<span class="selector-class">.border-1px</span></div><div class="line">		&amp;::after</div><div class="line">			-webkit-<span class="attribute">transform</span>: scaleY(<span class="number">0.7</span>)</div><div class="line">			<span class="attribute">transform</span>: scaleY(<span class="number">0.7</span>)</div><div class="line"></div><div class="line">@media (-webkit-min-device-pixel-ratio:<span class="number">2</span>),(min-device-pixel-ratio:<span class="number">2</span>)</div><div class="line">	<span class="selector-class">.border-1px</span></div><div class="line">		&amp;::after</div><div class="line">			-webkit-<span class="attribute">transform</span>: scaleY(<span class="number">0.5</span>)</div><div class="line">			<span class="attribute">transform</span>: scaleY(<span class="number">0.5</span>)</div></pre></td></tr></table></figure>
+</li>
+<li><p>在手机端查看网页，Windows用户可以在cdm中输入<code>ipconfig</code>来查看本机的IP地址，即IPv4。复制ip地址，更换掉浏览器中的localhost，用手机登录该地址即可查看。前提是在同个局域网下</p>
+</li>
+<li>在App.vue组件，即Header的父组件，通过发送一个Ajax请求，获取商家的相关数据。然后将这个数据通过header的prop属性传给App.vue组件</li>
+<li>处理传过来的数据对象的数组时，要用<code>v-if</code>来判断是否存在这个数组对应的属性对象。因为一开始这个数据对象可能为空。</li>
+<li>去除文字和其它元素的缝隙：方法一是设置父元素的<code>font-size</code>为0，再设置文字部分的font-size，方法二是去掉并排标签的空隙。</li>
+<li>项目图片的选择使用2x和3x图片来适应不同DPR的移动端</li>
+<li><code>&lt;style lang=&quot;stylus&quot; rel=&quot;stylesheet/stylus&quot;&gt;&lt;/style&gt;</code>中的<code>@import</code>写的是文字路径，不能使用在<code>build/webpack.base.conf.js</code>中自定义的路径</li>
+<li><code>vertical-align: top;</code>的使用：把元素的顶端与行中最高元素的顶端对齐</li>
+<li>webpack在编译过程中会把图片转成Base64图片</li>
+<li>Chrome浏览器的字体最小为12px，更小的字体要在移动端看</li>
+<li><p>带省略号的不跨行文字的CSS设置</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">nowrap</span></div><div class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span></div><div class="line"><span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>底部模糊背景的制作：<code>filter: blur(10px);</code>滤镜模糊，滤镜阴影会露出可使用<code>overflow: hidden;</code>解决</p>
+</li>
+<li>CSS sticky footer布局：一种方法是：比如：上部分内容设置<code>padding-bottom: 64px</code>，下部分内容设置为<code>margin: -64px auto 0 auto</code></li>
+<li>自适应直线中有文字的布局实现，使用Flex布局。使用div标签而不是span标签，因为span标签在安卓浏览器下有出错的可能。Vue-loader在编译文件时，会使用postcss工具来自动增添兼容性代码，所以写<code>display: flex</code>足矣</li>
+<li>对展开页面使用了vue的transion，并在css中定义相关属性</li>
+<li>展开页的背景模糊，<code>backdrop-filter: blur(10px)</code>只能在ios的移动端生效</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;总结包含以下内容： 页面骨架和header组件开发，页面布局，移动端的开发知识&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="WEB APP" scheme="http://icke.site/tags/WEB-APP/"/>
+    
+      <category term="Vue" scheme="http://icke.site/tags/Vue/"/>
+    
+      <category term="Webpack" scheme="http://icke.site/tags/Webpack/"/>
+    
+      <category term="Stylus" scheme="http://icke.site/tags/Stylus/"/>
+    
+  </entry>
   
   <entry>
     <title>ES6语法学习笔记</title>

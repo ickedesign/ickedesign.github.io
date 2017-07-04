@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-92921333-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<!-- End Google Analytics -->
+
+
+    
+
+    
+<!-- Baidu Tongji -->
+<script>var _hmt = _hmt || []</script>
+<script async src="//hm.baidu.com/hm.js?f944b2dd33cbed8ecdfd058fc7893116"></script>
+<!-- End Baidu Tongji -->
+
+
+
+
+    <meta charset="utf-8">
+    
+    
+    <link rel="canonical" href="http://icke.site/2017/07/04/20170704-Vue-Vue1xheader/">
+    
+    
+    <title>Vue1.x仿饿了吗的页面骨架和header组件开发 | Icke&#39;s Blog | 一个前端学习者</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#1ea076">
+    
+    
+    <meta name="keywords" content="WEB APP,Vue,Webpack,Stylus">
+    <meta name="description" content="总结包含以下内容： 页面骨架和header组件开发，页面布局，移动端的开发知识">
+<meta name="keywords" content="WEB APP,Vue,Webpack,Stylus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue1.x仿饿了吗的页面骨架和header组件开发">
+<meta property="og:url" content="http://icke.site/2017/07/04/20170704-Vue-Vue1xheader/index.html">
+<meta property="og:site_name" content="Icke&#39;s Blog">
+<meta property="og:description" content="总结包含以下内容： 页面骨架和header组件开发，页面布局，移动端的开发知识">
+<meta property="og:image" content="http://icke.site/img/Vue1xheader.png">
+<meta property="og:updated_time" content="2017-07-04T15:00:20.250Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vue1.x仿饿了吗的页面骨架和header组件开发">
+<meta name="twitter:description" content="总结包含以下内容： 页面骨架和header组件开发，页面布局，移动端的开发知识">
+<meta name="twitter:image" content="http://icke.site/img/Vue1xheader.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="Icke&#39;s Blog" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.6.10">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">Icke</h5>
+          <a href="mailto:szhibiao@gmail.com" title="szhibiao@gmail.com" class="mail">szhibiao@gmail.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                Home
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/ickedesign" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://codepen.io/ickedesign" target="_blank" >
+                <i class="icon icon-lg icon-codepen"></i>
+                Codepen
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://ickedesign.zcool.com.cn/" target="_blank" >
+                <i class="icon icon-lg icon-diamond"></i>
+                Zcool
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://segmentfault.com/u/ickedesign" target="_blank" >
+                <i class="icon icon-lg icon-bookmark"></i>
+                Segmentfault
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.imooc.com/u/2062946" target="_blank" >
+                <i class="icon icon-lg icon-rocket"></i>
+                Imooc
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://twitter.com/BemiuIcke" target="_blank" >
+                <i class="icon icon-lg icon-twitter"></i>
+                Twitter
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Vue1.x仿饿了吗的页面骨架和header组件开发</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Vue1.x仿饿了吗的页面骨架和header组件开发</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-07-04T13:22:00.000Z" itemprop="datePublished" class="page-time">
+  2017-07-04
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#起始"><span class="post-toc-number">1.</span> <span class="post-toc-text">起始</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面骨架搭建"><span class="post-toc-number">2.</span> <span class="post-toc-text">页面骨架搭建</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#header组件开发"><span class="post-toc-number">3.</span> <span class="post-toc-text">header组件开发</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-20170704-Vue-Vue1xheader"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Vue1.x仿饿了吗的页面骨架和header组件开发</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-07-04 21:22:00" datetime="2017-07-04T13:22:00.000Z"  itemprop="datePublished">2017-07-04</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>总结包含以下内容： 页面骨架和header组件开发，页面布局，移动端的开发知识<br><a id="more"></a><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/Vue1xheader.png" alt="Vue-Vue1xheader" title="">
+                </div>
+                <div class="image-caption">Vue-Vue1xheader</div>
+            </figure></p>
+<hr>
+<h3 id="起始"><a href="#起始" class="headerlink" title="起始"></a>起始</h3><ul>
+<li>Vue-cli，脚手架搭建基本代码框架</li>
+<li>Webpack，构建工具</li>
+<li>Vue-resource，与后端做数据交互</li>
+<li>Vue-router，做前端路由，可实现单页应用</li>
+<li>eslint，ES6代码风格检查工具，用来规范风格</li>
+<li>MVVM框架有React,Vue.js,Angular</li>
+<li>Vue.js是一款轻量级框架，gzip后只有20多KB，适合做移动端项目。借鉴了Angular的指令和React的组件化，核心思想是数据驱动和组件化（封装可重用的代码）</li>
+<li>MVVM：View视图部分（DOM），ViewModel：（通讯，观察者，监听，数据双向绑定），Model：（数据，JavaScript对象）</li>
+<li>组件化，工程化，模块化</li>
+</ul>
+<h3 id="页面骨架搭建"><a href="#页面骨架搭建" class="headerlink" title="页面骨架搭建"></a>页面骨架搭建</h3><ul>
+<li><p>使用Vue-cli作为项目的脚手架，安装<code>webpack#1.0</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">npm install -g vue-cli	<span class="comment">// 全局安装Vue-cli</span></div><div class="line">vue init webpack sell	<span class="comment">//sell是项目名称</span></div><div class="line"><span class="comment">// 在init过程中勾选ESlint，规范ES6编写</span></div><div class="line">cd sell	<span class="comment">// 进入sell文件夹</span></div><div class="line">npm install	<span class="comment">// 安装nodemodule模块</span></div><div class="line">npm run dev	<span class="comment">//运行</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>package.json中dependences是运行依赖，devDependencies是开发依赖</p>
+</li>
+<li>babelrc是用来做编码的预设，<code>&quot;comments&quot;: false</code>表示代码转换后不生成注释</li>
+</ul>
+<h3 id="header组件开发"><a href="#header组件开发" class="headerlink" title="header组件开发"></a>header组件开发</h3><ul>
+<li>项目使用了Mock数据来模拟后台数据</li>
+<li>Vue1.x的标签名对组件名大小写不敏感</li>
+<li>在Vue1.x中，改变路由<code>&lt;router-view&gt;&lt;/router-view&gt;</code>这部分会刷新</li>
+<li>在Vue1.x中使用Vue-router要更换掉<code>new Vue({})</code>这种写法，实例化方法为<code>Vue.extend({})</code></li>
+<li><p>1像素边框：因为手机的DPR(设备像素比)不同，所以1像素的边框在不同手机的像素是不一样的。一种解决是使用<code>@media query</code>，以下为<code>stylus</code>写法：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">@media (-webkit-min-device-pixel-ratio:<span class="number">1.5</span>),(min-device-pixel-ratio:<span class="number">1.5</span>)</div><div class="line">	<span class="selector-class">.border-1px</span></div><div class="line">		&amp;::after</div><div class="line">			-webkit-<span class="attribute">transform</span>: scaleY(<span class="number">0.7</span>)</div><div class="line">			<span class="attribute">transform</span>: scaleY(<span class="number">0.7</span>)</div><div class="line"></div><div class="line">@media (-webkit-min-device-pixel-ratio:<span class="number">2</span>),(min-device-pixel-ratio:<span class="number">2</span>)</div><div class="line">	<span class="selector-class">.border-1px</span></div><div class="line">		&amp;::after</div><div class="line">			-webkit-<span class="attribute">transform</span>: scaleY(<span class="number">0.5</span>)</div><div class="line">			<span class="attribute">transform</span>: scaleY(<span class="number">0.5</span>)</div></pre></td></tr></table></figure>
+</li>
+<li><p>在手机端查看网页，Windows用户可以在cdm中输入<code>ipconfig</code>来查看本机的IP地址，即IPv4。复制ip地址，更换掉浏览器中的localhost，用手机登录该地址即可查看。前提是在同个局域网下</p>
+</li>
+<li>在App.vue组件，即Header的父组件，通过发送一个Ajax请求，获取商家的相关数据。然后将这个数据通过header的prop属性传给App.vue组件</li>
+<li>处理传过来的数据对象的数组时，要用<code>v-if</code>来判断是否存在这个数组对应的属性对象。因为一开始这个数据对象可能为空。</li>
+<li>去除文字和其它元素的缝隙：方法一是设置父元素的<code>font-size</code>为0，再设置文字部分的font-size，方法二是去掉并排标签的空隙。</li>
+<li>项目图片的选择使用2x和3x图片来适应不同DPR的移动端</li>
+<li><code>&lt;style lang=&quot;stylus&quot; rel=&quot;stylesheet/stylus&quot;&gt;&lt;/style&gt;</code>中的<code>@import</code>写的是文字路径，不能使用在<code>build/webpack.base.conf.js</code>中自定义的路径</li>
+<li><code>vertical-align: top;</code>的使用：把元素的顶端与行中最高元素的顶端对齐</li>
+<li>webpack在编译过程中会把图片转成Base64图片</li>
+<li>Chrome浏览器的字体最小为12px，更小的字体要在移动端看</li>
+<li><p>带省略号的不跨行文字的CSS设置</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">nowrap</span></div><div class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span></div><div class="line"><span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>底部模糊背景的制作：<code>filter: blur(10px);</code>滤镜模糊，滤镜阴影会露出可使用<code>overflow: hidden;</code>解决</p>
+</li>
+<li>CSS sticky footer布局：一种方法是：比如：上部分内容设置<code>padding-bottom: 64px</code>，下部分内容设置为<code>margin: -64px auto 0 auto</code></li>
+<li>自适应直线中有文字的布局实现，使用Flex布局。使用div标签而不是span标签，因为span标签在安卓浏览器下有出错的可能。Vue-loader在编译文件时，会使用postcss工具来自动增添兼容性代码，所以写<code>display: flex</code>足矣</li>
+<li>对展开页面使用了vue的transion，并在css中定义相关属性</li>
+<li>展开页的背景模糊，<code>backdrop-filter: blur(10px)</code>只能在ios的移动端生效</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-07-04T15:00:20.250Z" itemprop="dateUpdated">2017-07-04 23:00:20</time>
+</span><br>
+
+
+        
+        原始链接：<a href="/2017/07/04/20170704-Vue-Vue1xheader/" target="_blank" rel="external">http://icke.site/2017/07/04/20170704-Vue-Vue1xheader/</a>
+        
+    </div>
+    <footer>
+        <a href="http://icke.site">
+            <img src="/img/avatar.jpg" alt="Icke">
+            Icke
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Stylus/">Stylus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue/">Vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WEB-APP/">WEB APP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webpack/">Webpack</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://icke.site/2017/07/04/20170704-Vue-Vue1xheader/&title=《Vue1.x仿饿了吗的页面骨架和header组件开发》 — Icke's Blog&pic=http://icke.site/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://icke.site/2017/07/04/20170704-Vue-Vue1xheader/&title=《Vue1.x仿饿了吗的页面骨架和header组件开发》 — Icke's Blog&source=总结包含以下内容： 页面骨架和header组件开发，页面布局，移动端的开发知识" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://icke.site/2017/07/04/20170704-Vue-Vue1xheader/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue1.x仿饿了吗的页面骨架和header组件开发》 — Icke's Blog&url=http://icke.site/2017/07/04/20170704-Vue-Vue1xheader/&via=http://icke.site" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://icke.site/2017/07/04/20170704-Vue-Vue1xheader/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/06/28/20170628-ES6-SyntaxLearning/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">ES6语法学习笔记</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+    <div id="cloud-tie-wrapper" class="comments cloud-tie-wrapper"></div>
+    <script>
+    var cloudTieConfig = {
+        url: 'http://icke.site/2017/07/04/20170704-Vue-Vue1xheader/index.html',
+        sourceId: '20170704-Vue-Vue1xheader',
+        productKey: '63e97e7d7f94429e86632efac839b253',
+        target: 'cloud-tie-wrapper',
+        pcFiles: [
+            '/css/cloudTie/pc.css?v=1.6.10',
+            '/js/cloudTie/pc.min.js?v=1.6.10',
+        ],
+        mobileFiles: [
+            '/css/cloudTie/mobile.css?v=1.6.10',
+            '/js/cloudTie/mobile.min.js?v=1.6.10'
+        ]
+    };
+    </script>
+    <script src="/js/cloudTie/loader.min.js?v=1.6.10"></script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢打赏~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat-reward.jpg" alt="打赏二维码">
+        </div>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>Icke &copy; 2017</span>
+            <span>
+                
+                <a href="http://icke.site/">一起探索这个伟大的世界吧</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://icke.site/2017/07/04/20170704-Vue-Vue1xheader/&title=《Vue1.x仿饿了吗的页面骨架和header组件开发》 — Icke's Blog&pic=http://icke.site/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://icke.site/2017/07/04/20170704-Vue-Vue1xheader/&title=《Vue1.x仿饿了吗的页面骨架和header组件开发》 — Icke's Blog&source=总结包含以下内容： 页面骨架和header组件开发，页面布局，移动端的开发知识" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://icke.site/2017/07/04/20170704-Vue-Vue1xheader/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Vue1.x仿饿了吗的页面骨架和header组件开发》 — Icke's Blog&url=http://icke.site/2017/07/04/20170704-Vue-Vue1xheader/&via=http://icke.site" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://icke.site/2017/07/04/20170704-Vue-Vue1xheader/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3aS1LDQAwFwNz/0uEAweZJmlDlmfaKIsaZ9kLo93rF1/vj+vz0886rT6vPX3ZhYGA8lvG+va6+/uqe+yck91fvwcDAOIdxFcHu70nCbjWM5gEaAwMD4z69y1PAPHAngR4DAwMjL017Qfn+af8UcDEwMB7LmBeTSQjOry/W4hgYGA9kTArLb//8lfkGBgbGoxjzIJgkfPMhwR+nwsDA2JoxH2GuKlCrr+aXM2BgYBzASI6bB9OoQRaPHJKEFQMDY29G8vG87bUqoUwCMQYGxn6MvLmff0G1MzZ5DgYGxmmM3qLY/UHzcWb1zui/BAYGxsMZ1UWHagma/G3edHtNojgGBsZjGb2wmzfu52G6/DQMDIztGL1iNW/G5a3/0evAwMA4hpEDekVvsmzRXObAwMDYmpEPKXsjzN4AoDxxxcDAOIBRbaUteGdxSYyBgYGRr1YkyVk+YEjCd/N/BQYGxnaMahO/1xSrttsWrI5hYGBsx1i1clFd/MpDdpSMYmBgHMOorln0hpT5EQsDCQwMjMMY1d/PxwP5czAwMM5k5MlZXrImgbLaUCucDQMDYyPGfKmikLoFix3VAI2BgXECYxLsqiljHsqTMUBzvQMDA+OxjHxwmDPytLK6tFF+0xgYGBsxqmsTvTWyedr3RymLgYGBESRt1Qx0WQ6LgYGB0Wr0TxpqzTobAwNja8akiH0PrmXhGAMDY2tGLyivOlYS7pP0FAMDY1PGDwog9Ruii1bsAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.6.10"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.6.10" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = 'Miss u';
+            clearTimeout(titleTime);
+        } else {
+            document.title = 'Welcome';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
