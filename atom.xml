@@ -49,12 +49,12 @@
 <li>使用组件树设计项目，组件标签使用驼峰写法<h4 id="父组件向子组件传递属性"><a href="#父组件向子组件传递属性" class="headerlink" title="父组件向子组件传递属性"></a>父组件向子组件传递属性</h4></li>
 </ul>
 <p>在父组件Parent.vue中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;div&gt;</div><div class="line">	&lt;v-child number-to-do="5"&gt;&lt;/v-child&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">import VChild from './components/Child';</div><div class="line">export default &#123;</div><div class="line">  components: &#123;</div><div class="line">    VChild</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>在子组件Child.vue中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;div&gt;</div><div class="line">	&#123;&#123;numberToDo&#125;&#125;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">export default &#123;</div><div class="line">  props: ['number-to-do']</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>在子组件Child.vue中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></div><div class="line">	&#123;&#123;numberToDo&#125;&#125;</div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">&lt;template&gt;</div><div class="line"></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="attr">props</span>: [<span class="string">'number-to-do'</span>]</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>使用<code>props</code>属性，<code>props</code>有两种写法，除了上述这种还有：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="attr">props</span>: &#123;</div><div class="line">	<span class="comment">// 如果从父组件返回给子组件的类型与定义的数据类型不同会报错</span></div><div class="line">	<span class="string">'number-to-do'</span>: <span class="built_in">Number</span> || <span class="built_in">String</span></div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;<span class="regexp">/script&gt;</span></div></pre></td></tr></table></figure></p>
-<h4 id="子组件向父组件发布事件"><a href="#子组件向父组件发布事件" class="headerlink" title="子组件向父组件发布事件"></a>子组件向父组件发布事件</h4><p>在子组件Child.vue中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;button @click="emitEvent"&gt;emit&lt;/button&gt;</div><div class="line">&lt;template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">export default &#123;</div><div class="line">  data () &#123;</div><div class="line">    return &#123;</div><div class="line">      msg: 'the emit word',</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    emitEvent() &#123;</div><div class="line">      this.$emit('my-event', this.msg);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<h4 id="子组件向父组件发布事件"><a href="#子组件向父组件发布事件" class="headerlink" title="子组件向父组件发布事件"></a>子组件向父组件发布事件</h4><p>在子组件Child.vue中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  <span class="xml"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"emitEvent"</span>&gt;</span>emit<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></div><div class="line">&lt;template&gt;</div><div class="line"></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span></div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  data () &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">msg</span>: <span class="string">'the emit word'</span>,</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    emitEvent() &#123;</div><div class="line">      <span class="keyword">this</span>.$emit(<span class="string">'my-event'</span>, <span class="keyword">this</span>.msg);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <p>在父组件Parent.vue中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;div&gt;</div><div class="line">	&lt;v-child @my-event="parentListen"&gt;&lt;/v-child&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">import VChild from './components/Child';</div><div class="line">export default &#123;</div><div class="line">  components: &#123;</div><div class="line">    VChild</div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    parentListen(evtValue) &#123;</div><div class="line">      console.log('11' + evtValue); //11the emit word</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<h4 id="slot插槽传递模板"><a href="#slot插槽传递模板" class="headerlink" title="slot插槽传递模板"></a>slot插槽传递模板</h4><p>从父组件传递给子组件:<br>在父组件Parent.vue中:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;div&gt;</div><div class="line">	&lt;div style="text-align: center;" is="v-child"&gt;</div><div class="line">      &lt;div slot="header"&gt;</div><div class="line">        i am header</div><div class="line">      &lt;/div&gt;</div><div class="line">      &lt;div slot="footer"&gt;</div><div class="line">        i am footer</div><div class="line">      &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;template&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">import VChild from './components/Child';</div><div class="line">export default &#123;</div><div class="line">  components: &#123;</div><div class="line">    VChild</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
-<p>在子组件Child.vue中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;div&gt;</div><div class="line">	&lt;slot name="header"&gt;no header&lt;/slot&gt;</div><div class="line">    &lt;slot name="container"&gt;no container&lt;/slot&gt;</div><div class="line">    &lt;slot name="footer"&gt;no footer&lt;/slot&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;template&gt;</div></pre></td></tr></table></figure></p>
+<h4 id="slot插槽传递模板"><a href="#slot插槽传递模板" class="headerlink" title="slot插槽传递模板"></a>slot插槽传递模板</h4><p>从父组件传递给子组件:<br>在父组件Parent.vue中:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"text-align: center;"</span> <span class="attr">is</span>=<span class="string">"v-child"</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"header"</span>&gt;</span></div><div class="line">        i am header</div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">"footer"</span>&gt;</span></div><div class="line">        i am footer</div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">&lt;template&gt;</div><div class="line"></div><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></span></div><div class="line"><span class="keyword">import</span> VChild <span class="keyword">from</span> <span class="string">'./components/Child'</span>;</div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  <span class="attr">components</span>: &#123;</div><div class="line">    VChild</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>在子组件Child.vue中<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span></div><div class="line">	<span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">"header"</span>&gt;</span>no header<span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">"container"</span>&gt;</span>no container<span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">slot</span> <span class="attr">name</span>=<span class="string">"footer"</span>&gt;</span>no footer<span class="tag">&lt;/<span class="name">slot</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">&lt;template&gt;</div></pre></td></tr></table></figure></p>
 <p>之后页面上的文字如下：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">i am header</div><div class="line">no container</div><div class="line">i am footer</div></pre></td></tr></table></figure></p>
 <h3 id="Vue过渡动画"><a href="#Vue过渡动画" class="headerlink" title="Vue过渡动画"></a>Vue过渡动画</h3><ul>
 <li>下图为Vue过渡动画的四种状态：<figure class="image-bubble">
@@ -110,14 +110,14 @@
     <link href="http://icke.site/2017/07/04/20170704-Vue-Vueheader/"/>
     <id>http://icke.site/2017/07/04/20170704-Vue-Vueheader/</id>
     <published>2017-07-04T13:22:00.000Z</published>
-    <updated>2017-07-05T14:09:05.763Z</updated>
+    <updated>2017-07-06T03:27:36.239Z</updated>
     
     <content type="html"><![CDATA[<p>总结包含以下内容： 页面骨架和header组件开发，页面布局，移动端的开发知识<br><a id="more"></a><br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/img/Vue1xheader.png" alt="Vue-Vue1xheader" title="">
+                    <img src="/img/Vueheader.png" alt="Vue-Vueheader" title="">
                 </div>
-                <div class="image-caption">Vue-Vue1xheader</div>
+                <div class="image-caption">Vue-Vueheader</div>
             </figure></p>
 <hr>
 <h3 id="起始"><a href="#起始" class="headerlink" title="起始"></a>起始</h3><ul>
@@ -156,18 +156,7 @@
 <li><code>&lt;style lang=&quot;stylus&quot; rel=&quot;stylesheet/stylus&quot;&gt;&lt;/style&gt;</code>中的<code>@import</code>写的是文字路径，不能使用在<code>build/webpack.base.conf.js</code>中自定义的路径</li>
 <li><code>vertical-align: top;</code>的使用：把元素的顶端与行中最高元素的顶端对齐</li>
 <li>webpack在编译过程中会把图片转成Base64图片</li>
-<li>Chrome浏览器的字体最小为</li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li></li>
-<li>2px，更小的字体要在移动端看</li>
+<li>Chrome浏览器的字体最小为12px，更小的字体要在移动端看</li>
 <li><p>带省略号的不跨行文字的CSS设置</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">nowrap</span></div><div class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span></div><div class="line"><span class="selector-tag">text-overflow</span>: <span class="selector-tag">ellipsis</span></div></pre></td></tr></table></figure>
 </li>
@@ -935,7 +924,7 @@
     <link href="http://icke.site/2017/03/05/20170305-JavaScript-RegExp/"/>
     <id>http://icke.site/2017/03/05/20170305-JavaScript-RegExp/</id>
     <published>2017-03-05T06:02:37.000Z</published>
-    <updated>2017-07-03T08:15:43.545Z</updated>
+    <updated>2017-07-06T03:42:24.951Z</updated>
     
     <content type="html"><![CDATA[<p>归纳包含以下内容： 正则表达式简介、工具使用、RegExp对象、元字符、字符类、范围类、JS预定义类、量词、JS正则的贪婪模式和非贪婪模式、分组、前瞻、JS对象属性、test和exec方法、字符串对象方法<br><a id="more"></a></p>
 <figure class="image-bubble">
@@ -954,9 +943,9 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170121011345132?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSWNrZU1veWVy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="在sublime中，使用快捷键ctrl+h打开replace窗口，再点击“*”，这样可以在输入框中输入正则表达式来查找" title="">
+                    <img src="http://img.blog.csdn.net/20170121011345132?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSWNrZU1veWVy/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="Sublime输入框" title="">
                 </div>
-                <div class="image-caption">在sublime中，使用快捷键ctrl+h打开replace窗口，再点击“*”，这样可以在输入框中输入正则表达式来查找</div>
+                <div class="image-caption">Sublime输入框</div>
             </figure>
 <ul>
 <li><strong>将is这个单词替换成IS</strong></li>
@@ -965,16 +954,16 @@
 <p>在输入框中输入：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170121175619196" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170121175619196" alt="Sublime输入框" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">Sublime输入框</div>
             </figure></p>
 <p>正则表达式图形表示：<br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170121175856903" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170121175856903" alt="Regexper图示" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">Regexper图示</div>
             </figure></p>
 <p>成功处理字段：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">//test.txt</div><div class="line">//将is这个单词替换成IS</div><div class="line">this IS a boy</div></pre></td></tr></table></figure>
@@ -986,16 +975,16 @@
 <p>在输入框中输入：<br> <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170121181519048" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170121181519048" alt="Sublime输入框" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">Sublime输入框</div>
             </figure></p>
 <p>正则表达式图形表示：<br> <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170121181606726" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170121181606726" alt="Regexper图示" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">Regexper图示</div>
             </figure></p>
 <blockquote>
 <p><strong>备注</strong>：<br>注意符号/要使用\来转义，即\/<br>. 表示any character，任意字符<br>+表示不限量<br>()内是第一个分组</p>
@@ -1009,16 +998,16 @@
 <p>在输入框中输入：<br> <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170121202531898" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170121202531898" alt="Sublime输入框" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">Sublime输入框</div>
             </figure></p>
 <p>正则表达式图形表示：<br> <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170121202610982" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170121202610982" alt="Regexper图示" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">Regexper图示</div>
             </figure></p>
 <p>成功处理字段：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//日期替换，将日期格式如2013-01-13替换成01-13-2013</div><div class="line">11-2014-12</div><div class="line">04-2015-06</div><div class="line">23771/34/22</div></pre></td></tr></table></figure>
@@ -1027,7 +1016,7 @@
 <li><strong>字面量</strong></li>
 </ul>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var reg=/\bis\b/g;</div><div class="line">'He is a boy.This is a dog'.replace(reg,'IS');</div></pre></td></tr></table></figure>
-<p> <img src="http://img.blog.csdn.net/20170121203846344" alt="这里写图片描述"></p>
+<p> <img src="http://img.blog.csdn.net/20170121203846344" alt="JSBin图示"></p>
 <ul>
 <li><strong>构造函数</strong></li>
 </ul>
@@ -1038,9 +1027,9 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170121204101330" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170121204101330" alt="JSBin图示" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">JSBin图示</div>
             </figure>
 <h3 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h3><p>正则表达式由两种基本字符类型组成：</p>
 <ul>
@@ -1091,16 +1080,16 @@
 <li><strong>一般情况下正则表达式一个字符对应字符串一个字符</strong><br>例如：表达式ab\t的含义是<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170123000332510" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170123000332510" alt="Regexper图示" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">Regexper图示</div>
             </figure></li>
 <li><strong>我们可以使用元字符[]来构建一个简单的类</strong><br>所谓类是指符合某些特性的对象，一个泛指，而不是特指某个字符<br>表达式[abc]，即把字符a或b或c归为一类，表达式可以匹配这类的字符<br>字符类取反：[^abc]<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170123001552671" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170123001552671" alt="JSBin图示" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">JSBin图示</div>
             </figure>
 </li>
 </ul>
@@ -1110,9 +1099,9 @@
 <li>[a-zA-Z]，可连写<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170124153110855" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170124153110855" alt="JSBin图示" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">JSBin图示</div>
             </figure>
 </li>
 </ul>
@@ -1172,9 +1161,9 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170125145955661" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170125145955661" alt="JSBin控制台" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">JSBin控制台</div>
             </figure>
 <ul>
 <li><strong>边界</strong></li>
@@ -1213,27 +1202,27 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170124154608939" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170124154608939" alt="JSBin图示" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">JSBin图示</div>
             </figure>
 </li>
 <li><p>^$的使用</p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170124155138161" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170124155138161" alt="JSBin图示" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">JSBin图示</div>
             </figure>
 </li>
 <li><p>多行匹配，/m影响的是^$的分割方式 </p>
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170124160042102" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170124160042102" alt="JSBin图示" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">JSBin图示</div>
             </figure>
 </li>
 </ul>
@@ -1283,9 +1272,9 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170124162327178" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170124162327178" alt="RegExper图示" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">RegExper图示</div>
             </figure>
 <hr>
 <h3 id="JS正则的贪婪模式和非贪婪模式"><a href="#JS正则的贪婪模式和非贪婪模式" class="headerlink" title="JS正则的贪婪模式和非贪婪模式"></a>JS正则的贪婪模式和非贪婪模式</h3><ul>
@@ -1298,9 +1287,9 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170124163038101" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170124163038101" alt="JSBin控制台" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">JSBin控制台</div>
             </figure>
 <hr>
 <h3 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h3><ul>
@@ -1310,9 +1299,9 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170124165026606" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170124165026606" alt="RegExper图示" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">RegExper图示</div>
             </figure>    
 <ul>
 <li><strong>或</strong><br>使用|来实现或<br>Byron|Casper和Byr(on|Ca)sper</li>
@@ -1321,9 +1310,9 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170124165255359" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170124165255359" alt="RegExper图示" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">RegExper图示</div>
             </figure>
 <ul>
 <li><strong>反向引用</strong><br>使用$符：将2016-07-13转换为07/13/2016</li>
@@ -1332,9 +1321,9 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170124195854900" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170124195854900" alt="RegExper图示" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">RegExper图示</div>
             </figure>
 <ul>
 <li><strong>忽略分组</strong><br>不希望捕获某些分组。只需要在分组内加上?:</li>
@@ -1343,9 +1332,9 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170124171502903" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170124171502903" alt="RegExper图示" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">RegExper图示</div>
             </figure>
 <h3 id="前瞻"><a href="#前瞻" class="headerlink" title="前瞻"></a>前瞻</h3><ul>
 <li>前瞻就是正则表达式匹配到规则的时候，向前检查是否符合断言。“前”指的是从文本头部到文本尾部的方向</li>
@@ -1376,9 +1365,9 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170124214751418" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170124214751418" alt="JSBin控制台" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">JSBin控制台</div>
             </figure>
 <h3 id="JS对象属性"><a href="#JS对象属性" class="headerlink" title="JS对象属性"></a>JS对象属性</h3><ul>
 <li><strong>global</strong> ：全局匹配，默认值为false</li>
@@ -1394,9 +1383,9 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170124222653164" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170124222653164" alt="JSBin控制台" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">JSBin控制台</div>
             </figure>
 <hr>
 <h3 id="test和exec方法"><a href="#test和exec方法" class="headerlink" title="test和exec方法"></a>test和exec方法</h3><ul>
@@ -1405,16 +1394,16 @@
 <li>用于测试字符串参数中是否存在匹配正则表达式模式的字符串。可以发现，在全局调用下，即对于reg2，在第三次test匹配时出现了false，这是因为在全局调用下lastIndex不为0。<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170125152324662" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170125152324662" alt="JSBin界面" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">JSBin界面</div>
             </figure></li>
 <li>每次都实例化reg2可以使test匹配时不出现false,但这花费内存开销。所以当我们想用到test本义时，不用加上/g来进行全局匹配<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170125152751892" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170125152751892" alt="JSBin控制台" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">JSBin控制台</div>
             </figure>
 </li>
 </ul>
@@ -1456,7 +1445,7 @@
 <li>方法返回第一个匹配结果的index，查找不到返回-1；</li>
 <li>search()方法不执行全局匹配，它将忽略/g，并且总是从字符串的开始进行检索</li>
 </ul>
-<p><img src="http://img.blog.csdn.net/20170125173842533" alt="这里写图片描述"></p>
+<p><img src="http://img.blog.csdn.net/20170125173842533" alt="JSBin控制台"></p>
 <blockquote>
 <p><strong>备注</strong>：对于字符串或数字，search()方法会尝试转化为正则表达式</p>
 </blockquote>
@@ -1496,9 +1485,9 @@
 <li>使用字符串或正则表达式来将原字符串分割成字符数组<figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="http://img.blog.csdn.net/20170125185936149" alt="这里写图片描述" title="">
+                    <img src="http://img.blog.csdn.net/20170125185936149" alt="JSBin界面" title="">
                 </div>
-                <div class="image-caption">这里写图片描述</div>
+                <div class="image-caption">JSBin界面</div>
             </figure>
 <blockquote>
 <p><strong>备注</strong>： split()方法将字符串转换为对应正则表达式</p>
@@ -1519,7 +1508,7 @@
 <li>匹配项在字符串中的index (index)</li>
 <li>原字符串 (origin)</li>
 </ol>
-<p><img src="http://img.blog.csdn.net/20170125200028285" alt="这里写图片描述"></p>
+<p><img src="http://img.blog.csdn.net/20170125200028285" alt="JSBin控制台"></p>
 </li>
 </ul>
 </li>
