@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://icke.site/"/>
-  <updated>2017-07-06T13:43:29.952Z</updated>
+  <updated>2017-07-22T03:11:36.859Z</updated>
   <id>http://icke.site/</id>
   
   <author>
@@ -14,6 +14,47 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于水平居中，垂直，水平居中垂直（未写完）</title>
+    <link href="http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/"/>
+    <id>http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/</id>
+    <published>2017-07-22T01:44:41.000Z</published>
+    <updated>2017-07-22T03:11:36.859Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用CSS2，CSS3和Flexbox实现：内联元素、块级元素和超过一个的块级元素的水平居中；一行或多行内联元素、知道元素高度和不知道元素高度的块级元素的垂直居中；固定高度和宽度的元素、不确定高度和宽度的元素的水平居中垂直。<br><a id="more"></a><br><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/CSS-VerticalCenterLayout.png" alt="CSS-VerticalCenterLayout" title="">
+                </div>
+                <div class="image-caption">CSS-VerticalCenterLayout</div>
+            </figure></p>
+<hr>
+<h3 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h3><h4 id="内联、内联块状元素等"><a href="#内联、内联块状元素等" class="headerlink" title="内联、内联块状元素等"></a>内联、内联块状元素等</h4><p>例如文本或链接，可以直接在块级父元素内居中。这可以用于有<code>inline</code>,<code>inline-block</code>, <code>inline-table</code>, <code>inline-flex</code>等属性的元素上。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.center-parent</span> &#123;</div><div class="line">	<span class="attribute">text-align</span>: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p></p><p data-height="265" data-theme-id="dark" data-slug-hash="ayoyVd" data-default-tab="result" data-user="ickedesign" data-embed-version="2" data-pen-title="Centering Inline Elements" class="codepen">See the Pen <a href="https://codepen.io/ickedesign/pen/ayoyVd/" target="_blank" rel="external">Centering Inline Elements</a> by icke (<a href="https://codepen.io/ickedesign" target="_blank" rel="external">@ickedesign</a>) on <a href="https://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<h4 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h4><p>将该块级元素的<code>margin-left</code>和<code>margin-right</code>属性设置为aoto（需要为其设置宽度，否则可能占满整行不需要居中），通常简单的记成:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.center-me</span> &#123;</div><div class="line">	<span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p></p><p data-height="265" data-theme-id="dark" data-slug-hash="oeveVe" data-default-tab="result" data-user="ickedesign" data-embed-version="2" data-pen-title="Centering Single Block Level Element" class="codepen">See the Pen <a href="https://codepen.io/ickedesign/pen/oeveVe/" target="_blank" rel="external">Centering Single Block Level Element</a> by icke (<a href="https://codepen.io/ickedesign" target="_blank" rel="external">@ickedesign</a>) on <a href="https://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>对于一个固定了宽度的块级元素或者其父元素这样使用都没什么问题。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用CSS2，CSS3和Flexbox实现：内联元素、块级元素和超过一个的块级元素的水平居中；一行或多行内联元素、知道元素高度和不知道元素高度的块级元素的垂直居中；固定高度和宽度的元素、不确定高度和宽度的元素的水平居中垂直。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="CSS3" scheme="http://icke.site/tags/CSS3/"/>
+    
+      <category term="Flexbox" scheme="http://icke.site/tags/Flexbox/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue2.x学习记录</title>
@@ -529,8 +570,8 @@
   
   <entry>
     <title>CSS易混淆点小总结</title>
-    <link href="http://icke.site/2017/03/12/20170312-CSS-Study-CSS-Layout/"/>
-    <id>http://icke.site/2017/03/12/20170312-CSS-Study-CSS-Layout/</id>
+    <link href="http://icke.site/2017/03/12/20170312-CSS-StudyCSSLayout/"/>
+    <id>http://icke.site/2017/03/12/20170312-CSS-StudyCSSLayout/</id>
     <published>2017-03-12T14:53:30.000Z</published>
     <updated>2017-07-03T08:14:52.301Z</updated>
     

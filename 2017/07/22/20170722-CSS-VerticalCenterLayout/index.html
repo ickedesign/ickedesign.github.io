@@ -26,29 +26,29 @@ ga('send', 'pageview');
     <meta charset="utf-8">
     
     
-    <link rel="canonical" href="http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/">
+    <link rel="canonical" href="http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/">
     
     
-    <title>HTML5 WEB APP的使用 | Icke&#39;s Blog | 一个前端学习者</title>
+    <title>关于水平居中，垂直，水平居中垂直（未写完） | Icke&#39;s Blog | 一个前端学习者</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#1ea076">
     
     
-    <meta name="keywords" content="HTML5,WEB APP">
-    <meta name="description" content="总结包含以下内容：HTML5的应用场景，HTML5对比Native的优势，WEB+APP发展现状，HTML5 WEB APP的发展趋势">
-<meta name="keywords" content="HTML5,WEB APP">
+    <meta name="keywords" content="CSS3,Flexbox">
+    <meta name="description" content="使用CSS2，CSS3和Flexbox实现：内联元素、块级元素和超过一个的块级元素的水平居中；一行或多行内联元素、知道元素高度和不知道元素高度的块级元素的垂直居中；固定高度和宽度的元素、不确定高度和宽度的元素的水平居中垂直。">
+<meta name="keywords" content="CSS3,Flexbox">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML5 WEB APP的使用">
-<meta property="og:url" content="http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/index.html">
+<meta property="og:title" content="关于水平居中，垂直，水平居中垂直（未写完）">
+<meta property="og:url" content="http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/index.html">
 <meta property="og:site_name" content="Icke&#39;s Blog">
-<meta property="og:description" content="总结包含以下内容：HTML5的应用场景，HTML5对比Native的优势，WEB+APP发展现状，HTML5 WEB APP的发展趋势">
-<meta property="og:image" content="http://icke.site/img/HTML5Analysis.png">
-<meta property="og:updated_time" content="2017-07-03T08:16:04.199Z">
+<meta property="og:description" content="使用CSS2，CSS3和Flexbox实现：内联元素、块级元素和超过一个的块级元素的水平居中；一行或多行内联元素、知道元素高度和不知道元素高度的块级元素的垂直居中；固定高度和宽度的元素、不确定高度和宽度的元素的水平居中垂直。">
+<meta property="og:image" content="http://icke.site/img/CSS-VerticalCenterLayout.png">
+<meta property="og:updated_time" content="2017-07-22T03:11:36.859Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML5 WEB APP的使用">
-<meta name="twitter:description" content="总结包含以下内容：HTML5的应用场景，HTML5对比Native的优势，WEB+APP发展现状，HTML5 WEB APP的发展趋势">
-<meta name="twitter:image" content="http://icke.site/img/HTML5Analysis.png">
+<meta name="twitter:title" content="关于水平居中，垂直，水平居中垂直（未写完）">
+<meta name="twitter:description" content="使用CSS2，CSS3和Flexbox实现：内联元素、块级元素和超过一个的块级元素的水平居中；一行或多行内联元素、知道元素高度和不知道元素高度的块级元素的垂直居中；固定高度和宽度的元素、不确定高度和宽度的元素的水平居中垂直。">
+<meta name="twitter:image" content="http://icke.site/img/CSS-VerticalCenterLayout.png">
     
         <link rel="alternate" type="application/atom+xml" title="Icke&#39;s Blog" href="/atom.xml">
     
@@ -153,7 +153,7 @@ ga('send', 'pageview');
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">HTML5 WEB APP的使用</div>
+        <div class="flex-col header-title ellipsis">关于水平居中，垂直，水平居中垂直（未写完）</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -175,11 +175,11 @@ ga('send', 'pageview');
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">HTML5 WEB APP的使用</h1>
+        <h1 class="title">关于水平居中，垂直，水平居中垂直（未写完）</h1>
         <h5 class="subtitle">
             
-                <time datetime="2017-05-17T02:34:30.000Z" itemprop="datePublished" class="page-time">
-  2017-05-17
+                <time datetime="2017-07-22T01:44:41.000Z" itemprop="datePublished" class="page-time">
+  2017-07-22
 </time>
 
 
@@ -198,17 +198,17 @@ ga('send', 'pageview');
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTML5的应用场景"><span class="post-toc-number">1.</span> <span class="post-toc-text">HTML5的应用场景</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTML5对比Native的优势"><span class="post-toc-number">2.</span> <span class="post-toc-text">HTML5对比Native的优势</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#WEB-APP发展现状"><span class="post-toc-number">3.</span> <span class="post-toc-text">WEB+APP发展现状</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTML5-WEB-APP的发展趋势"><span class="post-toc-number">4.</span> <span class="post-toc-text">HTML5 WEB APP的发展趋势</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#水平居中"><span class="post-toc-number">1.</span> <span class="post-toc-text">水平居中</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#内联、内联块状元素等"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">内联、内联块状元素等</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#块级元素"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">块级元素</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
-<article id="post-20170517-HTML5-HTML5Analysis"
+<article id="post-20170722-CSS-VerticalCenterLayout"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">HTML5 WEB APP的使用</h1>
+        <h1 class="post-card-title">关于水平居中，垂直，水平居中垂直（未写完）</h1>
         <div class="post-meta">
-            <time class="post-time" title="2017-05-17 10:34:30" datetime="2017-05-17T02:34:30.000Z"  itemprop="datePublished">2017-05-17</time>
+            <time class="post-time" title="2017-07-22 09:44:41" datetime="2017-07-22T01:44:41.000Z"  itemprop="datePublished">2017-07-22</time>
 
             
 
@@ -221,62 +221,25 @@ ga('send', 'pageview');
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <p>总结包含以下内容：HTML5的应用场景，HTML5对比Native的优势，WEB+APP发展现状，HTML5 WEB APP的发展趋势</p>
-<a id="more"></a>
-<figure class="image-bubble">
+            <p>使用CSS2，CSS3和Flexbox实现：内联元素、块级元素和超过一个的块级元素的水平居中；一行或多行内联元素、知道元素高度和不知道元素高度的块级元素的垂直居中；固定高度和宽度的元素、不确定高度和宽度的元素的水平居中垂直。<br><a id="more"></a><br><figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/img/HTML5Analysis.png" alt="HTML5Analysis" title="">
+                    <img src="/img/CSS-VerticalCenterLayout.png" alt="CSS-VerticalCenterLayout" title="">
                 </div>
-                <div class="image-caption">HTML5Analysis</div>
-            </figure>
+                <div class="image-caption">CSS-VerticalCenterLayout</div>
+            </figure></p>
 <hr>
-<h3 id="HTML5的应用场景"><a href="#HTML5的应用场景" class="headerlink" title="HTML5的应用场景"></a>HTML5的应用场景</h3><ul>
-<li>PC端：LocalStorage本地存储(渐强式体验：对支持HTML5的浏览器使用LocalStorage)</li>
-<li>手机端：<ul>
-<li>基于Web View的Web Hybrid Native开发，优点是更新比较灵活</li>
-<li>Web App开发：H5广告，H5游戏，H5网站</li>
-</ul>
-</li>
-</ul>
-<h3 id="HTML5对比Native的优势"><a href="#HTML5对比Native的优势" class="headerlink" title="HTML5对比Native的优势"></a>HTML5对比Native的优势</h3><ul>
-<li>HTML5提供了符合语义化的标签，比如：<code>&lt;article&gt;</code>、<code>&lt;section&gt;</code>、<code>&lt;header&gt;</code>、<code>&lt;output&gt;</code>、<code>&lt;figure&gt;</code>、<code>&lt;footer&gt;</code></li>
-<li>对API更好的支持：SessionStorage、WebGL、Web Workers、Canvas</li>
-<li>Native虽然使用流畅，但更新慢，在App Store中还需审核。可以试想一下一次开发多终端受益（嵌在Web View中）  </li>
-</ul>
-<h3 id="WEB-APP发展现状"><a href="#WEB-APP发展现状" class="headerlink" title="WEB+APP发展现状"></a>WEB+APP发展现状</h3><ul>
-<li>现状：不能一次开发多终端适配<ul>
-<li>在PC时代，多终端适配指浏览器适配</li>
-<li>在移动端时代，其指手机系统的适配（Antroid、Apple的按键使用不同，比如返回键）</li>
-</ul>
-</li>
-<li>Native App与Hybrid App的体验差：动画方面和DPM操作<ul>
-<li>手机的CPU（计算）和GPU（图形渲染）比PC慢</li>
-</ul>
-</li>
-<li>Native App在手机端的效果比较好的原因：<ul>
-<li>在WEB APP和Hybrid App上的编译过程是：JS编译成JAVA再编译成机器语言，最后运行</li>
-<li>Native App没有编译过程，性能快很多</li>
-<li>因此目前网页的性能是不能匹敌Native App的</li>
-</ul>
-</li>
-<li>提出一次开发多终端适配的原因：<ul>
-<li>Media Query的出现，针对设备分辨率进行适配，出现响应式页面。但这需要在性能和效果之间做出权衡</li>
-<li>CSS3：在HTML5时代使用CSS3的animation属性来代替DOM的动画操作。例如用transform接口来实现手机Web页面的Tab切换  </li>
-</ul>
-</li>
-</ul>
-<h3 id="HTML5-WEB-APP的发展趋势"><a href="#HTML5-WEB-APP的发展趋势" class="headerlink" title="HTML5 WEB APP的发展趋势"></a>HTML5 WEB APP的发展趋势</h3><ul>
-<li>WEB APP正在尝试无限接近Native App<ul>
-<li>FaceBook之前不断使用HTML5技术去更新APP，后来出现了APP卡顿的现象，继而使用Native技术去替换更新。这是一次尝试</li>
-</ul>
-</li>
-<li>与HTML5有关的框架是React<ul>
-<li>通过JS来编写逻辑，通过Native实现界面效果</li>
-<li>Native用来构建User Interface，即用户界面，解决了Web App的一个痛点，即构建页面的性能平均问题  </li>
-</ul>
-</li>
-</ul>
+<h3 id="水平居中"><a href="#水平居中" class="headerlink" title="水平居中"></a>水平居中</h3><h4 id="内联、内联块状元素等"><a href="#内联、内联块状元素等" class="headerlink" title="内联、内联块状元素等"></a>内联、内联块状元素等</h4><p>例如文本或链接，可以直接在块级父元素内居中。这可以用于有<code>inline</code>,<code>inline-block</code>, <code>inline-table</code>, <code>inline-flex</code>等属性的元素上。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.center-parent</span> &#123;</div><div class="line">	<span class="attribute">text-align</span>: center;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p></p><p data-height="265" data-theme-id="dark" data-slug-hash="ayoyVd" data-default-tab="result" data-user="ickedesign" data-embed-version="2" data-pen-title="Centering Inline Elements" class="codepen">See the Pen <a href="https://codepen.io/ickedesign/pen/ayoyVd/" target="_blank" rel="external">Centering Inline Elements</a> by icke (<a href="https://codepen.io/ickedesign" target="_blank" rel="external">@ickedesign</a>) on <a href="https://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<h4 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素"></a>块级元素</h4><p>将该块级元素的<code>margin-left</code>和<code>margin-right</code>属性设置为aoto（需要为其设置宽度，否则可能占满整行不需要居中），通常简单的记成:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.center-me</span> &#123;</div><div class="line">	<span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p></p><p data-height="265" data-theme-id="dark" data-slug-hash="oeveVe" data-default-tab="result" data-user="ickedesign" data-embed-version="2" data-pen-title="Centering Single Block Level Element" class="codepen">See the Pen <a href="https://codepen.io/ickedesign/pen/oeveVe/" target="_blank" rel="external">Centering Single Block Level Element</a> by icke (<a href="https://codepen.io/ickedesign" target="_blank" rel="external">@ickedesign</a>) on <a href="https://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<p>对于一个固定了宽度的块级元素或者其父元素这样使用都没什么问题。</p>
 
         </div>
 
@@ -284,12 +247,12 @@ ga('send', 'pageview');
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2017-07-03T08:16:04.199Z" itemprop="dateUpdated">2017-07-03 16:16:04</time>
+    最后更新时间：<time datetime="2017-07-22T03:11:36.859Z" itemprop="dateUpdated">2017-07-22 11:11:36</time>
 </span><br>
 
 
         
-        原始链接：<a href="/2017/05/17/20170517-HTML5-HTML5Analysis/" target="_blank" rel="external">http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/</a>
+        原始链接：<a href="/2017/07/22/20170722-CSS-VerticalCenterLayout/" target="_blank" rel="external">http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/</a>
         
     </div>
     <footer>
@@ -309,7 +272,7 @@ ga('send', 'pageview');
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5/">HTML5</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WEB-APP/">WEB APP</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS3/">CSS3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Flexbox/">Flexbox</a></li></ul>
 
 
             
@@ -319,7 +282,7 @@ ga('send', 'pageview');
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/&title=《HTML5 WEB APP的使用》 — Icke's Blog&pic=http://icke.site/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/&title=《关于水平居中，垂直，水平居中垂直（未写完）》 — Icke's Blog&pic=http://icke.site/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -329,22 +292,22 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/&title=《HTML5 WEB APP的使用》 — Icke's Blog&source=总结包含以下内容：HTML5的应用场景，HTML5对比Native的优势，WEB+APP发展现状，HTML5 WEB APP的发展趋势" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/&title=《关于水平居中，垂直，水平居中垂直（未写完）》 — Icke's Blog&source=使用CSS2，CSS3和Flexbox实现：内联元素、块级元素和超过一个的块级元素的水平居中；一行或多行内联元素、知道元素高度和不知道元素高度的块级元素的..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《HTML5 WEB APP的使用》 — Icke's Blog&url=http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/&via=http://icke.site" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《关于水平居中，垂直，水平居中垂直（未写完）》 — Icke's Blog&url=http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/&via=http://icke.site" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -364,21 +327,14 @@ ga('send', 'pageview');
     </div>
 
     
-<nav class="post-nav flex-row flex-justify-between">
-  
-    <div class="waves-block waves-effect prev">
-      <a href="/2017/05/25/20170525-HTML5-Performance/" id="post-prev" class="post-nav-link">
-        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
-        <h4 class="title">移动端ICON制作、性能陷阱和硬件加速</h4>
-      </a>
-    </div>
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
   
     <div class="waves-block waves-effect next">
-      <a href="/2017/03/12/20170312-CSS-StudyCSSLayout/" id="post-next" class="post-nav-link">
+      <a href="/2017/07/05/20170705-Vue-Vue2xStudy/" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">CSS易混淆点小总结</h4>
+        <h4 class="title">Vue2.x学习记录</h4>
       </a>
     </div>
   
@@ -398,8 +354,8 @@ ga('send', 'pageview');
     <div id="cloud-tie-wrapper" class="comments cloud-tie-wrapper"></div>
     <script>
     var cloudTieConfig = {
-        url: 'http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/index.html',
-        sourceId: '20170517-HTML5-HTML5Analysis',
+        url: 'http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/index.html',
+        sourceId: '20170722-CSS-VerticalCenterLayout',
         productKey: '63e97e7d7f94429e86632efac839b253',
         target: 'cloud-tie-wrapper',
         pcFiles: [
@@ -481,7 +437,7 @@ ga('send', 'pageview');
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/&title=《HTML5 WEB APP的使用》 — Icke's Blog&pic=http://icke.site/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/&title=《关于水平居中，垂直，水平居中垂直（未写完）》 — Icke's Blog&pic=http://icke.site/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -491,22 +447,22 @@ ga('send', 'pageview');
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/&title=《HTML5 WEB APP的使用》 — Icke's Blog&source=总结包含以下内容：HTML5的应用场景，HTML5对比Native的优势，WEB+APP发展现状，HTML5 WEB APP的发展趋势" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/&title=《关于水平居中，垂直，水平居中垂直（未写完）》 — Icke's Blog&source=使用CSS2，CSS3和Flexbox实现：内联元素、块级元素和超过一个的块级元素的水平居中；一行或多行内联元素、知道元素高度和不知道元素高度的块级元素的..." data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《HTML5 WEB APP的使用》 — Icke's Blog&url=http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/&via=http://icke.site" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《关于水平居中，垂直，水平居中垂直（未写完）》 — Icke's Blog&url=http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/&via=http://icke.site" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://icke.site/2017/05/17/20170517-HTML5-HTML5Analysis/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -517,7 +473,7 @@ ga('send', 'pageview');
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNUlEQVR42u3aS26DQBAFwNz/0s42UgJ+rwdHYihWlmPjKRad/n19xdfrx/X7nfO/Ht3t6PXRty64MDAwbst4nV5Hn5lhzmH5/f+4DwYGxgMYeVhcD8fnv56zMTAwMGaBcpb2JXfAwMDAmJWabVCepaQYGBgY7e3WC9q80P1ILY6BgXFDRt51///XH5lvYGBg3IrxKq821Tt///wxFafCwMDYmpEHuLzIzFO39e9iYGA8gZGMD/OjtwODhBHBMDAwtmbkqVsUuctiuA2+b3gYGBhbM9pBZvsD7YpY+0kMDIy9GcmBVhYyVjK3onmHgYGxNSMvZRPMrASdjSWGFTkGBsZtGXmJuNJEmz2ItvTFwMDYjzErPpMAmjf6Z+OHwxEmBgbGdox22SIvYtuks/3Fol+IgYGxBWMWcNv5Q9Qyix9HMVnFwMDYgtEWmflxZ+Vx3vg7TA0xMDA2Zaw30fLwmhexw/8YGBgY2zE+tzzRJprtSd6UshgYGJsyVhptwwZZuX5RAzAwMLZgrCxMzNpz+RpHHtAxMDCewGjTr1lSmI8l6hEpBgbGYxjrhWW7wLGSONYZJQYGxg0ZK8lcsh6xMlQo6m8MDIytGW3Tbb1Z3z6UYtkCAwNja8asEd8WujPqxUUsBgbGzRlt4FvBz4reN0knBgYGRlxkrqSJ/7QVgoGB8RhGWx8nh27bcxcEXAwMjFsxkiTvqkZ/tObVLnBgYGBszWjzrvzQ+VGSO1ww1MTAwLgf4xuXbYmHP2zepQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3aS3LDIBBFUe9/08oCZJH7urHLwNUolagQh0GnP7xe+Lluz9Nf+ftPP9/fn/bIkCFjWcY1fMhG7xsar8yPiexNhgwZ5zCelh6/kx7H+Cv8uzJkyJBBlhund2PkOCmUIUOGjG8GXP4+TzdlyJBxMoMUsbzgrJWp5FsTanEZMmQsyOBd9+///JH5hgwZMpZiXOHTGVjyzcW7kiFDxtaMWoHaL3d5uhnsR4YMGVsz0oFi7fIEKXfTwhidkAwZMhZnpEle2r6vJY5py0+GDBknMNLrDnwrtTDNx6syZMg4hzEOhemYkwTW2hcffy9DhowDGEFoCy9VdFp1QQNOhgwZWzPS1j8fZHYOiyemb1aTIUPGdoxai79f0KaAf45MhgwZWzNIcpYOJmvBt9ho6ywtQ4aMBRm8Wc9HjxxcGw/IkCHjHEZ6jywdBpCQXcPHYVeGDBkLMtJCMS1B05Zc6z+GDBkytmbwRfkR9JNFkkq+6RrKkCFjO0atKO1ssRP00ZoyZMjYlDG3od9v6hUPSIYMGQcwSKLWKU0JvnV8MmTIOJLxiaEjHyqQVFKGDBknMGqjRH4JI8VMqL9lyJCxHYM/fIRQSyvTdDAN0zJkyFidURsx1jbNRwUpWIYMGScwSAKXbpekoZ0BgwwZMmSkrfxZ5WvawpMhQ4aMfnONB1w+Cv1IwJUhQ8bPM9LrFP2t17r6E9ptMmTIWJDRWaIzYuRJJEklZciQsSnjD3TQN/W1+5XqAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
