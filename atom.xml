@@ -48,11 +48,11 @@
   </entry>
   
   <entry>
-    <title>水平居中，垂直和水平垂直居中</title>
+    <title>关于水平居中，垂直和水平垂直居中</title>
     <link href="http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/"/>
     <id>http://icke.site/2017/07/22/20170722-CSS-VerticalCenterLayout/</id>
     <published>2017-07-22T01:44:41.000Z</published>
-    <updated>2017-08-04T15:36:50.309Z</updated>
+    <updated>2017-08-04T15:41:01.249Z</updated>
     
     <content type="html"><![CDATA[<p>使用CSS2，CSS3和Flexbox实现：内联元素、块级元素和超过一个的块级元素的水平居中；一行或多行内联元素、知道元素高度和不知道元素高度的块级元素的垂直居中；固定高度和宽度的元素、不确定高度和宽度的元素的水平垂直居中。<br><a id="more"></a><br><figure class="image-bubble">
                 <div class="img-lightbox">
